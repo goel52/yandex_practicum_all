@@ -1,0 +1,9 @@
+airflow connections add 'pg_connection' \
+    --conn-json '{
+        "conn_type": "postgres",
+        "login": "jovyan",
+        "password": "jovyan",
+        "host": "localhost",
+        "port": 5432,
+        "schema": "de"
+    }'

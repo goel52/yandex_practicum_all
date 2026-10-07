@@ -1,0 +1,27 @@
+curl -o customer_research.csv https://storage.yandexcloud.net/s3-sprint3/lessons/customer_research.csv
+curl -o user_activity_log.csv https://storage.yandexcloud.net/s3-sprint3/lessons/user_activity_log.csv
+curl -o user_order_log.csv https://storage.yandexcloud.net/s3-sprint3/lessons/user_order_log.csv
+
+-- COPY stage.customer_research(date_id,category_id,geo_id,sales_qty,sales_amt)
+-- FROM '/lessons/5. Реализация ETL в Airflow/4. Extract: как подключиться к хранилищу, чтобы получить файл/Задание 2/customer_research.csv'
+-- DELIMITER ','
+-- CSV HEADER;
+
+-- SELECT count(1) FROM stage.customer_research;
+
+-- DELETE FROM stage.customer_research;
+
+-- COPY stage.user_activity_log(date_time,action_id,customer_id,quantity)
+-- FROM '/lessons/5. Реализация ETL в Airflow/4. Extract: как подключиться к хранилищу, чтобы получить файл/Задание 2/user_activity_log.csv'
+-- DELIMITER ','
+-- CSV HEADER;
+
+-- SELECT count(1) FROM stage.user_activity_log;
+
+
+-- COPY stage.user_order_log(date_time,city_id,city_name,customer_id,first_name,last_name,item_id,item_name,quantity,payment_amount)
+-- FROM '/lessons/5. Реализация ETL в Airflow/4. Extract: как подключиться к хранилищу, чтобы получить файл/Задание 2/user_order_log.csv'
+-- DELIMITER ','
+-- CSV HEADER;
+
+-- SELECT count(1) FROM stage.user_order_log;

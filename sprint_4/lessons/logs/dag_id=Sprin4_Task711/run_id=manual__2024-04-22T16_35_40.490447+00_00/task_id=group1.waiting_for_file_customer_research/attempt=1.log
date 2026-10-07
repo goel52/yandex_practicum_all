@@ -1,0 +1,76 @@
+[2024-04-22 16:35:43,460] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group1.waiting_for_file_customer_research manual__2024-04-22T16:35:40.490447+00:00 [queued]>
+[2024-04-22 16:35:43,468] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group1.waiting_for_file_customer_research manual__2024-04-22T16:35:40.490447+00:00 [queued]>
+[2024-04-22 16:35:43,468] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-22 16:35:43,469] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-22 16:35:43,469] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-22 16:35:43,503] {taskinstance.py:1377} INFO - Executing <Task(FileSensor): group1.waiting_for_file_customer_research> on 2024-04-22 16:35:40.490447+00:00
+[2024-04-22 16:35:43,511] {standard_task_runner.py:52} INFO - Started process 2021 to run task
+[2024-04-22 16:35:43,513] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Sprin4_Task711', 'group1.waiting_for_file_customer_research', 'manual__2024-04-22T16:35:40.490447+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_autocheck.py', '--cfg-path', '/tmp/tmpumk2gqfc', '--error-file', '/tmp/tmpzif2dxs7']
+[2024-04-22 16:35:43,514] {standard_task_runner.py:80} INFO - Job 11: Subtask group1.waiting_for_file_customer_research
+[2024-04-22 16:35:43,689] {task_command.py:369} INFO - Running <TaskInstance: Sprin4_Task711.group1.waiting_for_file_customer_research manual__2024-04-22T16:35:40.490447+00:00 [running]> on host 22ba72ddea2e
+[2024-04-22 16:35:43,895] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=Sprin4_Task711
+AIRFLOW_CTX_TASK_ID=group1.waiting_for_file_customer_research
+AIRFLOW_CTX_EXECUTION_DATE=2024-04-22T16:35:40.490447+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-04-22T16:35:40.490447+00:00
+[2024-04-22 16:35:43,944] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:35:43,947] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:35:49,039] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:35:49,042] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:35:54,104] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:35:54,107] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:35:59,164] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:35:59,164] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:04,263] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:04,264] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:09,358] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:09,358] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:14,458] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:14,458] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:19,557] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:19,557] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:24,638] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:24,638] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:29,732] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:29,732] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:34,809] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:34,809] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:39,911] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:39,912] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:45,012] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:45,012] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:50,107] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:50,107] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:36:55,212] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:36:55,212] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:00,312] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:00,313] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:05,372] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:05,372] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:10,469] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:10,469] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:15,569] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:15,569] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:20,665] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:20,666] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:25,766] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:25,766] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:30,868] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:30,872] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:35,972] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:35,972] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:41,072] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:41,072] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:46,178] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:46,178] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:51,280] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-04-22 16:37:51,280] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-04-22 16:37:54,019] {local_task_job.py:220} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-04-22 16:37:54,021] {process_utils.py:125} INFO - Sending Signals.SIGTERM to group 2021. PIDs of all processes in the group: [2021]
+[2024-04-22 16:37:54,021] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 2021
+[2024-04-22 16:37:54,022] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-22 16:37:54,125] {process_utils.py:75} INFO - Process psutil.Process(pid=2021, status='terminated', exitcode=0, started='16:35:43') (2021) terminated with exit code 0

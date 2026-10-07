@@ -1,0 +1,31 @@
+[2024-04-17 13:49:27,497] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: AAAAAAAA542_s3_load_example.upload_from_s3 scheduled__2024-04-15T00:00:00+00:00 [queued]>
+[2024-04-17 13:49:27,511] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: AAAAAAAA542_s3_load_example.upload_from_s3 scheduled__2024-04-15T00:00:00+00:00 [queued]>
+[2024-04-17 13:49:27,512] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-17 13:49:27,512] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-17 13:49:27,512] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-17 13:49:27,534] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): upload_from_s3> on 2024-04-15 00:00:00+00:00
+[2024-04-17 13:49:27,541] {standard_task_runner.py:52} INFO - Started process 495 to run task
+[2024-04-17 13:49:27,545] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'AAAAAAAA542_s3_load_example', 'upload_from_s3', 'scheduled__2024-04-15T00:00:00+00:00', '--job-id', '285', '--raw', '--subdir', 'DAGS_FOLDER/realization_dag.py', '--cfg-path', '/tmp/tmpob8713oh', '--error-file', '/tmp/tmp18e3ahsx']
+[2024-04-17 13:49:27,546] {standard_task_runner.py:80} INFO - Job 285: Subtask upload_from_s3
+[2024-04-17 13:49:27,797] {task_command.py:369} INFO - Running <TaskInstance: AAAAAAAA542_s3_load_example.upload_from_s3 scheduled__2024-04-15T00:00:00+00:00 [running]> on host 573eb3fefc62
+[2024-04-17 13:49:28,057] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AAAAAAAA542_s3_load_example
+AIRFLOW_CTX_TASK_ID=upload_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2024-04-15T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-04-15T00:00:00+00:00
+[2024-04-17 13:49:28,058] {logging_mixin.py:115} INFO - /opt/airflow
+[2024-04-17 13:49:28,058] {logging_mixin.py:115} INFO - https://storage.yandexcloud.net/s3-sprint3-static/lessons/customer_research.csv
+[2024-04-17 13:49:28,177] {logging_mixin.py:115} INFO - customer_research.csv is loaded. size is (690, 5)
+[2024-04-17 13:49:28,187] {logging_mixin.py:115} INFO - https://storage.yandexcloud.net/s3-sprint3-static/lessons/user_activity_log.csv
+[2024-04-17 13:49:28,273] {logging_mixin.py:115} INFO - user_activity_log.csv is loaded. size is (208, 4)
+[2024-04-17 13:49:28,275] {logging_mixin.py:115} INFO - https://storage.yandexcloud.net/s3-sprint3-static/lessons/user_order_log.csv
+[2024-04-17 13:49:28,736] {logging_mixin.py:115} INFO - user_order_log.csv is loaded. size is (22847, 10)
+[2024-04-17 13:49:28,832] {logging_mixin.py:115} INFO - ['logs', 'airflow-webserver.pid', 'webserver_config.py', 'airflow.cfg']
+[2024-04-17 13:49:28,833] {python.py:173} INFO - Done. Returned value was: None
+[2024-04-17 13:49:28,900] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=AAAAAAAA542_s3_load_example, task_id=upload_from_s3, execution_date=20240415T000000, start_date=20240417T134927, end_date=20240417T134928
+[2024-04-17 13:49:28,960] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-04-17 13:49:29,111] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2025-04-19 18:02:53,678] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group1.waiting_for_file_customer_research scheduled__2025-04-18T00:00:00+00:00 [queued]>
+[2025-04-19 18:02:53,705] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group1.waiting_for_file_customer_research scheduled__2025-04-18T00:00:00+00:00 [queued]>
+[2025-04-19 18:02:53,706] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-19 18:02:53,706] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-04-19 18:02:53,707] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-04-19 18:02:53,830] {taskinstance.py:1377} INFO - Executing <Task(FileSensor): group1.waiting_for_file_customer_research> on 2025-04-18 00:00:00+00:00
+[2025-04-19 18:02:53,835] {standard_task_runner.py:52} INFO - Started process 833 to run task
+[2025-04-19 18:02:53,842] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Sprin4_Task711', 'group1.waiting_for_file_customer_research', 'scheduled__2025-04-18T00:00:00+00:00', '--job-id', '139', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_autocheck.py', '--cfg-path', '/tmp/tmp3im87hkk', '--error-file', '/tmp/tmpsvegtmmz']
+[2025-04-19 18:02:53,844] {standard_task_runner.py:80} INFO - Job 139: Subtask group1.waiting_for_file_customer_research
+[2025-04-19 18:02:54,170] {task_command.py:369} INFO - Running <TaskInstance: Sprin4_Task711.group1.waiting_for_file_customer_research scheduled__2025-04-18T00:00:00+00:00 [running]> on host b662479610bc
+[2025-04-19 18:02:54,521] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=Sprin4_Task711
+AIRFLOW_CTX_TASK_ID=group1.waiting_for_file_customer_research
+AIRFLOW_CTX_EXECUTION_DATE=2025-04-18T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-04-18T00:00:00+00:00
+[2025-04-19 18:02:54,629] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2025-04-19 18:02:54,634] {filesystem.py:58} INFO - Poking for file /lessons/data/customer_research.csv
+[2025-04-19 18:02:54,637] {filesystem.py:63} INFO - Found File /lessons/data/customer_research.csv last modified: 20221208060834
+[2025-04-19 18:02:54,642] {base.py:301} INFO - Success criteria met. Exiting.
+[2025-04-19 18:02:54,773] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=Sprin4_Task711, task_id=group1.waiting_for_file_customer_research, execution_date=20250418T000000, start_date=20250419T180253, end_date=20250419T180254
+[2025-04-19 18:02:54,805] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-04-19 18:02:55,057] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

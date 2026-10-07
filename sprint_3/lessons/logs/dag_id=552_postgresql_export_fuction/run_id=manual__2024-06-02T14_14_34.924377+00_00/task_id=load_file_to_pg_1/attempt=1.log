@@ -1,0 +1,32 @@
+[2024-06-02 14:14:39,392] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 552_postgresql_export_fuction.load_file_to_pg_1 manual__2024-06-02T14:14:34.924377+00:00 [queued]>
+[2024-06-02 14:14:39,400] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 552_postgresql_export_fuction.load_file_to_pg_1 manual__2024-06-02T14:14:34.924377+00:00 [queued]>
+[2024-06-02 14:14:39,400] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 14:14:39,400] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-02 14:14:39,400] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 14:14:39,414] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_file_to_pg_1> on 2024-06-02 14:14:34.924377+00:00
+[2024-06-02 14:14:39,423] {standard_task_runner.py:52} INFO - Started process 1580 to run task
+[2024-06-02 14:14:39,426] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '552_postgresql_export_fuction', 'load_file_to_pg_1', 'manual__2024-06-02T14:14:34.924377+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/tmp_dag.py', '--cfg-path', '/tmp/tmpcpxl1zvo', '--error-file', '/tmp/tmplzlgw8ll']
+[2024-06-02 14:14:39,426] {standard_task_runner.py:80} INFO - Job 77: Subtask load_file_to_pg_1
+[2024-06-02 14:14:39,618] {task_command.py:369} INFO - Running <TaskInstance: 552_postgresql_export_fuction.load_file_to_pg_1 manual__2024-06-02T14:14:34.924377+00:00 [running]> on host d29a6a2ebe77
+[2024-06-02 14:14:39,843] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=552_postgresql_export_fuction
+AIRFLOW_CTX_TASK_ID=load_file_to_pg_1
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-02T14:14:34.924377+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-06-02T14:14:34.924377+00:00
+[2024-06-02 14:14:39,844] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 168, in execute
+    context_merge(context, self.op_kwargs, templates_dict=self.templates_dict)
+  File "/usr/local/lib/python3.8/dist-packages/airflow/utils/context.py", line 256, in context_merge
+    context.update(*args, **kwargs)
+  File "/usr/lib/python3.8/_collections_abc.py", line 837, in update
+    for key, value in other:
+ValueError: too many values to unpack (expected 2)
+[2024-06-02 14:14:39,904] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=552_postgresql_export_fuction, task_id=load_file_to_pg_1, execution_date=20240602T141434, start_date=20240602T141439, end_date=20240602T141439
+[2024-06-02 14:14:39,924] {standard_task_runner.py:92} ERROR - Failed to execute job 77 for task load_file_to_pg_1 (too many values to unpack (expected 2); 1580)
+[2024-06-02 14:14:39,959] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-06-02 14:14:40,108] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

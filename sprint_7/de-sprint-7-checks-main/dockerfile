@@ -1,0 +1,31 @@
+FROM eclipse-temurin:8-jre-jammy AS java
+
+FROM python:3.10-slim-bookworm AS runtime
+COPY --from=java /opt/java/openjdk /opt/java
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates libstdc++6 zlib1g \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV JAVA_HOME=/opt/java \
+    PATH="/opt/java/bin:$PATH" \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONPATH=/app/src \
+    SPARK_LOCAL_IP=127.0.0.1 \
+    PYSPARK_PYTHON=/usr/local/bin/python \
+    PYSPARK_SUBMIT_ARGS="--driver-memory 1g --conf spark.ui.enabled=false pyspark-shell"
+
+WORKDIR /app
+COPY src/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+COPY src ./src
+RUN useradd --create-home --uid 10001 checker && chown checker:checker /app
+USER checker
+EXPOSE 8000
+CMD ["uvicorn", "sprint_7_check_service.run:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
+
+FROM runtime AS test
+COPY tests ./tests
+RUN python -m pytest -q -p no:cacheprovider
+
+FROM runtime AS production

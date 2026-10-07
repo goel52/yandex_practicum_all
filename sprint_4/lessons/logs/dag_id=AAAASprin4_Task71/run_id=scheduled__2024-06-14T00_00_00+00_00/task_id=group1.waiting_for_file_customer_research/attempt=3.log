@@ -1,0 +1,39 @@
+[2024-06-20 13:56:19,638] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: AAAASprin4_Task71.group1.waiting_for_file_customer_research scheduled__2024-06-14T00:00:00+00:00 [queued]>
+[2024-06-20 13:56:19,647] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: AAAASprin4_Task71.group1.waiting_for_file_customer_research scheduled__2024-06-14T00:00:00+00:00 [queued]>
+[2024-06-20 13:56:19,647] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-20 13:56:19,647] {taskinstance.py:1357} INFO - Starting attempt 3 of 1
+[2024-06-20 13:56:19,648] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-20 13:56:19,664] {taskinstance.py:1377} INFO - Executing <Task(FileSensor): group1.waiting_for_file_customer_research> on 2024-06-14 00:00:00+00:00
+[2024-06-20 13:56:19,665] {standard_task_runner.py:52} INFO - Started process 339 to run task
+[2024-06-20 13:56:19,668] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'AAAASprin4_Task71', 'group1.waiting_for_file_customer_research', 'scheduled__2024-06-14T00:00:00+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/de04030301auth_dag.py', '--cfg-path', '/tmp/tmpdds1r7r9', '--error-file', '/tmp/tmp8bmytl6h']
+[2024-06-20 13:56:19,668] {standard_task_runner.py:80} INFO - Job 46: Subtask group1.waiting_for_file_customer_research
+[2024-06-20 13:56:19,873] {task_command.py:369} INFO - Running <TaskInstance: AAAASprin4_Task71.group1.waiting_for_file_customer_research scheduled__2024-06-14T00:00:00+00:00 [running]> on host 22ba72ddea2e
+[2024-06-20 13:56:20,224] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AAAASprin4_Task71
+AIRFLOW_CTX_TASK_ID=group1.waiting_for_file_customer_research
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-14T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-14T00:00:00+00:00
+[2024-06-20 13:56:20,285] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:56:20,286] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-20 13:56:25,347] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:56:25,347] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-20 13:56:30,417] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:56:30,418] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-20 13:56:35,469] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:56:35,469] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-20 13:56:40,525] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:56:40,526] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-20 13:56:45,586] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:56:45,587] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-20 13:56:50,639] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:56:50,640] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-20 13:56:55,705] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:56:55,705] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-20 13:57:00,794] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:57:00,794] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-20 13:57:05,885] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-20 13:57:05,885] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv

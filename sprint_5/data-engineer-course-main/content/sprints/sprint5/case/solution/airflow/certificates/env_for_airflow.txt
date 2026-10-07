@@ -1,0 +1,6 @@
+MONGO_DB_CERTIFICATE_PATH="/opt/airflow/certificates/PracticumSp5MongoDb.crt"
+MONGO_DB_DATABASE_NAME="db-mongo"
+MONGO_DB_HOST="rc1a-ba83ae33hvt4pokq.mdb.yandexcloud.net:27018"
+MONGO_DB_PASSWORD="student1"
+MONGO_DB_REPLICA_SET="rs01"
+MONGO_DB_USER="student"

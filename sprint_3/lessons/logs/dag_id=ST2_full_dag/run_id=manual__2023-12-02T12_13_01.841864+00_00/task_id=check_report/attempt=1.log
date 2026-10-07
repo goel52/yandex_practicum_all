@@ -1,0 +1,25 @@
+[2023-12-02 12:13:06,609] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.check_report manual__2023-12-02T12:13:01.841864+00:00 [queued]>
+[2023-12-02 12:13:06,616] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.check_report manual__2023-12-02T12:13:01.841864+00:00 [queued]>
+[2023-12-02 12:13:06,617] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-02 12:13:06,617] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-12-02 12:13:06,617] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-02 12:13:06,631] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): check_report> on 2023-12-02 12:13:01.841864+00:00
+[2023-12-02 12:13:06,636] {standard_task_runner.py:52} INFO - Started process 1854 to run task
+[2023-12-02 12:13:06,639] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'ST2_full_dag', 'check_report', 'manual__2023-12-02T12:13:01.841864+00:00', '--job-id', '112', '--raw', '--subdir', 'DAGS_FOLDER/st_dag.py', '--cfg-path', '/tmp/tmpoiztvas3', '--error-file', '/tmp/tmpcw5efazj']
+[2023-12-02 12:13:06,639] {standard_task_runner.py:80} INFO - Job 112: Subtask check_report
+[2023-12-02 12:13:06,823] {task_command.py:369} INFO - Running <TaskInstance: ST2_full_dag.check_report manual__2023-12-02T12:13:01.841864+00:00 [running]> on host 1ebf31cf1116
+[2023-12-02 12:13:07,037] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=ST2_full_dag
+AIRFLOW_CTX_TASK_ID=check_report
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-02T12:13:01.841864+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-02T12:13:01.841864+00:00
+[2023-12-02 12:14:21,155] {logging_mixin.py:115} INFO - 0 SUCCESS
+[2023-12-02 12:14:21,254] {logging_mixin.py:115} INFO - report_id is TWpBeU15MHhNaTB3TWxReE1qb3hNem93TkFsaWNubGhlbWRwYmkxelpYSm5aUT09
+[2023-12-02 12:14:21,255] {python.py:173} INFO - Done. Returned value was: TWpBeU15MHhNaTB3TWxReE1qb3hNem93TkFsaWNubGhlbWRwYmkxelpYSm5aUT09
+[2023-12-02 12:14:21,376] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=ST2_full_dag, task_id=check_report, execution_date=20231202T121301, start_date=20231202T121306, end_date=20231202T121421
+[2023-12-02 12:14:21,397] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-12-02 12:14:21,529] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

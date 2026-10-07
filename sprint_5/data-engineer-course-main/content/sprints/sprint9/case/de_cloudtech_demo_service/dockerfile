@@ -1,0 +1,16 @@
+FROM python:3.10
+
+RUN apt-get update -y
+
+COPY . .
+
+RUN pip install -r requirements.txt
+
+WORKDIR /src/scripts
+RUN pyinstaller -F helm_test.py
+RUN pyinstaller -F manifest_test.py
+
+WORKDIR /src
+ENTRYPOINT ["python"]
+
+CMD ["app.py"]

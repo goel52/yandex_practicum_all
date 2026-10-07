@@ -1,0 +1,295 @@
+[2024-06-15 19:17:17,125] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: AAAASprin4_Task71.group1.waiting_for_file_customer_research scheduled__2024-06-14T00:00:00+00:00 [queued]>
+[2024-06-15 19:17:17,132] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: AAAASprin4_Task71.group1.waiting_for_file_customer_research scheduled__2024-06-14T00:00:00+00:00 [queued]>
+[2024-06-15 19:17:17,133] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-15 19:17:17,133] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-15 19:17:17,133] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-15 19:17:17,147] {taskinstance.py:1377} INFO - Executing <Task(FileSensor): group1.waiting_for_file_customer_research> on 2024-06-14 00:00:00+00:00
+[2024-06-15 19:17:17,148] {standard_task_runner.py:52} INFO - Started process 2158 to run task
+[2024-06-15 19:17:17,151] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'AAAASprin4_Task71', 'group1.waiting_for_file_customer_research', 'scheduled__2024-06-14T00:00:00+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/de04030301auth_dag.py', '--cfg-path', '/tmp/tmp9_xuelat', '--error-file', '/tmp/tmpq_k3dkr2']
+[2024-06-15 19:17:17,151] {standard_task_runner.py:80} INFO - Job 42: Subtask group1.waiting_for_file_customer_research
+[2024-06-15 19:17:17,325] {task_command.py:369} INFO - Running <TaskInstance: AAAASprin4_Task71.group1.waiting_for_file_customer_research scheduled__2024-06-14T00:00:00+00:00 [running]> on host 22ba72ddea2e
+[2024-06-15 19:17:17,533] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AAAASprin4_Task71
+AIRFLOW_CTX_TASK_ID=group1.waiting_for_file_customer_research
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-14T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-14T00:00:00+00:00
+[2024-06-15 19:17:17,582] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:17:17,583] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:17:22,661] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:17:22,662] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:17:27,713] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:17:27,713] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:17:32,771] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:17:32,771] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:17:37,874] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:17:37,875] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:17:42,936] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:17:42,937] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:17:48,031] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:17:48,032] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:17:53,127] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:17:53,127] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:17:58,226] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:17:58,226] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:03,325] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:03,326] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:08,426] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:08,426] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:13,526] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:13,526] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:18,625] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:18,625] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:23,727] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:23,728] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:28,823] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:28,823] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:33,923] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:33,924] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:39,017] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:39,018] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:44,120] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:44,120] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:49,220] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:49,221] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:54,318] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:54,318] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:18:59,412] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:18:59,412] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:04,485] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:04,486] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:09,589] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:09,590] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:14,692] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:14,692] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:19,785] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:19,785] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:24,883] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:24,883] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:29,985] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:29,986] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:35,093] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:35,093] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:40,194] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:40,194] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:45,295] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:45,295] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:50,383] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:50,383] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:19:55,477] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:19:55,478] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:00,571] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:00,572] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:05,673] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:05,673] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:10,777] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:10,777] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:15,871] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:15,872] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:20,971] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:20,972] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:26,061] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:26,061] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:31,160] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:31,161] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:36,262] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:36,263] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:41,360] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:41,361] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:46,462] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:46,463] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:51,567] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:51,568] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:20:56,656] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:20:56,657] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:01,724] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:01,725] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:06,776] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:06,776] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:11,843] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:11,843] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:16,935] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:16,935] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:22,036] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:22,036] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:27,138] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:27,138] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:32,241] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:32,244] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:37,332] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:37,333] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:42,428] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:42,429] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:47,509] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:47,509] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:52,604] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:52,604] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:21:57,662] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:21:57,662] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:02,767] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:02,768] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:07,862] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:07,863] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:12,939] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:12,940] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:18,040] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:18,041] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:23,141] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:23,141] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:28,201] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:28,201] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:33,300] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:33,301] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:38,395] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:38,395] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:43,498] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:43,499] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:48,558] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:48,558] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:53,654] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:53,654] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:22:58,711] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:22:58,712] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:03,811] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:03,811] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:08,909] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:08,909] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:14,013] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:14,014] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:19,111] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:19,112] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:24,205] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:24,205] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:29,305] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:29,305] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:34,400] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:34,400] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:39,499] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:39,499] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:44,596] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:44,597] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:49,680] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:49,680] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:54,784] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:54,784] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:23:59,883] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:23:59,884] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:04,981] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:04,981] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:10,079] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:10,080] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:15,183] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:15,184] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:20,282] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:20,283] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:25,351] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:25,351] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:30,405] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:30,405] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:35,493] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:35,497] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:40,598] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:40,599] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:45,698] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:45,698] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:50,801] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:50,801] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:24:55,900] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:24:55,900] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:00,999] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:01,002] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:06,097] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:06,097] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:11,196] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:11,197] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:16,289] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:16,290] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:21,394] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:21,394] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:26,488] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:26,489] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:31,545] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:31,546] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:36,645] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:36,646] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:41,748] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:41,748] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:46,849] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:46,849] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:51,922] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:51,923] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:25:57,000] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:25:57,000] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:02,054] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:02,054] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:07,154] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:07,155] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:12,241] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:12,242] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:17,343] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:17,343] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:22,438] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:22,438] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:27,536] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:27,536] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:32,629] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:32,629] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:37,729] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:37,729] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:42,829] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:42,830] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:47,930] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:47,930] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:53,031] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:53,031] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:26:58,130] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:26:58,130] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:03,211] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:03,212] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:08,310] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:08,310] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:13,410] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:13,410] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:18,511] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:18,511] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:23,604] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:23,604] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:28,706] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:28,706] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:33,808] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:33,808] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:38,909] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:38,910] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:44,007] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:44,007] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:49,106] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:49,107] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:54,202] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:54,203] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:27:59,278] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:27:59,278] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:04,328] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:04,328] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:09,382] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:09,383] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:14,483] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:14,483] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:19,578] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:19,579] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:24,677] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:24,678] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:29,772] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:29,772] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:34,871] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:34,872] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:39,973] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:39,974] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:45,062] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:45,063] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:50,163] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:50,163] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv
+[2024-06-15 19:28:55,269] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:28:55,269] {filesystem.py:58} INFO - Poking for file lessons/data/customer_research.csv

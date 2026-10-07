@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "key": "Open"
+    },
+    {
+        "id": 2,
+        "key": "Cooking"
+    },
+    {
+        "id": 3,
+        "key": "Delivering"
+    },
+    {
+        "id": 4,
+        "key": "Closed"
+    },
+    {
+        "id": 5,
+        "key": "Cancelled"
+    }
+]

@@ -1,0 +1,37 @@
+[2023-11-06 10:51:16,160] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sales_mart.generate_report scheduled__2023-10-30T10:50:55.553222+00:00 [queued]>
+[2023-11-06 10:51:16,190] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: sales_mart.generate_report scheduled__2023-10-30T10:50:55.553222+00:00 [queued]>
+[2023-11-06 10:51:16,190] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-06 10:51:16,191] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-11-06 10:51:16,191] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-06 10:51:16,233] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): generate_report> on 2023-10-30 10:50:55.553222+00:00
+[2023-11-06 10:51:16,239] {standard_task_runner.py:52} INFO - Started process 950 to run task
+[2023-11-06 10:51:16,243] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'sales_mart', 'generate_report', 'scheduled__2023-10-30T10:50:55.553222+00:00', '--job-id', '178', '--raw', '--subdir', 'DAGS_FOLDER/sprint3.py', '--cfg-path', '/tmp/tmpkh7xhw1n', '--error-file', '/tmp/tmpw0b7rva9']
+[2023-11-06 10:51:16,244] {standard_task_runner.py:80} INFO - Job 178: Subtask generate_report
+[2023-11-06 10:51:16,601] {task_command.py:369} INFO - Running <TaskInstance: sales_mart.generate_report scheduled__2023-10-30T10:50:55.553222+00:00 [running]> on host 262d3f61dcff
+[2023-11-06 10:51:17,047] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=student@example.com
+AIRFLOW_CTX_DAG_OWNER=student
+AIRFLOW_CTX_DAG_ID=sales_mart
+AIRFLOW_CTX_TASK_ID=generate_report
+AIRFLOW_CTX_EXECUTION_DATE=2023-10-30T10:50:55.553222+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-10-30T10:50:55.553222+00:00
+[2023-11-06 10:51:17,049] {logging_mixin.py:115} INFO - Making request generate_report
+[2023-11-06 10:51:17,049] {logging_mixin.py:115} INFO - {'X-Nickname': 'kostas', 'X-Cohort': '13', 'X-Project': 'True', 'X-API-KEY': None}
+[2023-11-06 10:51:17,335] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/sprint3.py", line 37, in generate_report
+    response.raise_for_status()
+  File "/usr/local/lib/python3.8/dist-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net/generate_report
+[2023-11-06 10:51:17,448] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=sales_mart, task_id=generate_report, execution_date=20231030T105055, start_date=20231106T105116, end_date=20231106T105117
+[2023-11-06 10:51:17,498] {standard_task_runner.py:92} ERROR - Failed to execute job 178 for task generate_report (403 Client Error: Forbidden for url: https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net/generate_report; 950)
+[2023-11-06 10:51:17,533] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-11-06 10:51:17,817] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

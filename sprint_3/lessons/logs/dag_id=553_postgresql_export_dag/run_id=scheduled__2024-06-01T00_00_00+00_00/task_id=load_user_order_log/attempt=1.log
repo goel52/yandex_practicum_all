@@ -1,0 +1,36 @@
+[2024-06-02 21:50:16,875] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 553_postgresql_export_dag.load_user_order_log scheduled__2024-06-01T00:00:00+00:00 [queued]>
+[2024-06-02 21:50:16,883] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 553_postgresql_export_dag.load_user_order_log scheduled__2024-06-01T00:00:00+00:00 [queued]>
+[2024-06-02 21:50:16,883] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 21:50:16,883] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-02 21:50:16,883] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 21:50:16,898] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_user_order_log> on 2024-06-01 00:00:00+00:00
+[2024-06-02 21:50:16,906] {standard_task_runner.py:52} INFO - Started process 7773 to run task
+[2024-06-02 21:50:16,908] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '553_postgresql_export_dag', 'load_user_order_log', 'scheduled__2024-06-01T00:00:00+00:00', '--job-id', '80', '--raw', '--subdir', 'DAGS_FOLDER/tmp_dag.py', '--cfg-path', '/tmp/tmpt8tg3ps6', '--error-file', '/tmp/tmp43pz_f6s']
+[2024-06-02 21:50:16,909] {standard_task_runner.py:80} INFO - Job 80: Subtask load_user_order_log
+[2024-06-02 21:50:17,081] {task_command.py:369} INFO - Running <TaskInstance: 553_postgresql_export_dag.load_user_order_log scheduled__2024-06-01T00:00:00+00:00 [running]> on host d29a6a2ebe77
+[2024-06-02 21:50:17,296] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=553_postgresql_export_dag
+AIRFLOW_CTX_TASK_ID=load_user_order_log
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-01T00:00:00+00:00
+[2024-06-02 21:50:17,402] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/tmp_dag.py", line 64, in load_file_to_pg
+    cur.execute(insert_st.replace('{vals}',vals))
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "user_order_log_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[2024-06-02 21:50:17,460] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=553_postgresql_export_dag, task_id=load_user_order_log, execution_date=20240601T000000, start_date=20240602T215016, end_date=20240602T215017
+[2024-06-02 21:50:17,478] {standard_task_runner.py:92} ERROR - Failed to execute job 80 for task load_user_order_log (duplicate key value violates unique constraint "user_order_log_pkey"
+DETAIL:  Key (id)=(1) already exists.
+; 7773)
+[2024-06-02 21:50:17,504] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-06-02 21:50:17,635] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

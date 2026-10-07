@@ -1,0 +1,45 @@
+[2024-04-03 19:36:29,517] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: AAAAAAAA542_s3_load_example.upload_from_s3 manual__2024-04-03T19:36:28.012832+00:00 [queued]>
+[2024-04-03 19:36:29,525] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: AAAAAAAA542_s3_load_example.upload_from_s3 manual__2024-04-03T19:36:28.012832+00:00 [queued]>
+[2024-04-03 19:36:29,525] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-03 19:36:29,525] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-03 19:36:29,526] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-03 19:36:29,540] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): upload_from_s3> on 2024-04-03 19:36:28.012832+00:00
+[2024-04-03 19:36:29,548] {standard_task_runner.py:52} INFO - Started process 2737 to run task
+[2024-04-03 19:36:29,551] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'AAAAAAAA542_s3_load_example', 'upload_from_s3', 'manual__2024-04-03T19:36:28.012832+00:00', '--job-id', '237', '--raw', '--subdir', 'DAGS_FOLDER/realization_dag.py', '--cfg-path', '/tmp/tmpxitzm_zs', '--error-file', '/tmp/tmpp5ehk1sg']
+[2024-04-03 19:36:29,551] {standard_task_runner.py:80} INFO - Job 237: Subtask upload_from_s3
+[2024-04-03 19:36:29,732] {task_command.py:369} INFO - Running <TaskInstance: AAAAAAAA542_s3_load_example.upload_from_s3 manual__2024-04-03T19:36:28.012832+00:00 [running]> on host b8dc254fa961
+[2024-04-03 19:36:29,943] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=AAAAAAAA542_s3_load_example
+AIRFLOW_CTX_TASK_ID=upload_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2024-04-03T19:36:28.012832+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-04-03T19:36:28.012832+00:00
+[2024-04-03 19:36:29,944] {logging_mixin.py:115} INFO - /opt/airflow
+[2024-04-03 19:36:29,944] {logging_mixin.py:115} INFO - https://storage.yandexcloud.net/s3-sprint3-static/lessons/customer_research.csv
+[2024-04-03 19:36:30,511] {logging_mixin.py:115} INFO - customer_research.csv is loaded. size is (690, 5)
+[2024-04-03 19:36:30,515] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/realization_dag.py", line 34, in upload_from_s3
+    df.to_csv(f"/lessons/5. Реализация ETL в Airflow/4. Extract: как подключиться к хранилищу, чтобы получить файл/Задание 2/tmp_{fn}" , index = False)
+  File "/usr/local/lib/python3.8/dist-packages/pandas/core/generic.py", line 3563, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+  File "/usr/local/lib/python3.8/dist-packages/pandas/io/formats/format.py", line 1180, in to_csv
+    csv_formatter.save()
+  File "/usr/local/lib/python3.8/dist-packages/pandas/io/formats/csvs.py", line 241, in save
+    with get_handle(
+  File "/usr/local/lib/python3.8/dist-packages/pandas/io/common.py", line 697, in get_handle
+    check_parent_directory(str(handle))
+  File "/usr/local/lib/python3.8/dist-packages/pandas/io/common.py", line 571, in check_parent_directory
+    raise OSError(fr"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/lessons/5. Реализация ETL в Airflow/4. Extract: как подключиться к хранилищу, чтобы получить файл/Задание 2'
+[2024-04-03 19:36:30,586] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=AAAAAAAA542_s3_load_example, task_id=upload_from_s3, execution_date=20240403T193628, start_date=20240403T193629, end_date=20240403T193630
+[2024-04-03 19:36:30,606] {standard_task_runner.py:92} ERROR - Failed to execute job 237 for task upload_from_s3 (Cannot save file into a non-existent directory: '/lessons/5. Реализация ETL в Airflow/4. Extract: как подключиться к хранилищу, чтобы получить файл/Задание 2'; 2737)
+[2024-04-03 19:36:30,650] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-04-03 19:36:30,777] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

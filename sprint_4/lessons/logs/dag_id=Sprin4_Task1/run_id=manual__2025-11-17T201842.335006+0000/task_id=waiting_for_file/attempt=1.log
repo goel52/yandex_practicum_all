@@ -1,0 +1,40 @@
+[2025-11-17 20:18:43,368] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task1.waiting_for_file manual__2025-11-17T20:18:42.335006+00:00 [queued]>
+[2025-11-17 20:18:43,373] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task1.waiting_for_file manual__2025-11-17T20:18:42.335006+00:00 [queued]>
+[2025-11-17 20:18:43,373] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-11-17 20:18:43,374] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-11-17 20:18:43,374] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-11-17 20:18:43,382] {taskinstance.py:1377} INFO - Executing <Task(FileSensor): waiting_for_file> on 2025-11-17 20:18:42.335006+00:00
+[2025-11-17 20:18:43,384] {standard_task_runner.py:52} INFO - Started process 977 to run task
+[2025-11-17 20:18:43,386] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Sprin4_Task1', 'waiting_for_file', 'manual__2025-11-17T20:18:42.335006+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/test_dag.py', '--cfg-path', '/tmp/tmpvm6_6b9n', '--error-file', '/tmp/tmp5wostq5s']
+[2025-11-17 20:18:43,386] {standard_task_runner.py:80} INFO - Job 5: Subtask waiting_for_file
+[2025-11-17 20:18:43,434] {task_command.py:369} INFO - Running <TaskInstance: Sprin4_Task1.waiting_for_file manual__2025-11-17T20:18:42.335006+00:00 [running]> on host 9d75450fd1d9
+[2025-11-17 20:18:43,476] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=Sprin4_Task1
+AIRFLOW_CTX_TASK_ID=waiting_for_file
+AIRFLOW_CTX_EXECUTION_DATE=2025-11-17T20:18:42.335006+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-11-17T20:18:42.335006+00:00
+[2025-11-17 20:18:43,484] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2025-11-17 20:18:43,485] {filesystem.py:58} INFO - Poking for file /data/test.txt
+[2025-11-17 20:18:48,498] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2025-11-17 20:18:48,498] {filesystem.py:58} INFO - Poking for file /data/test.txt
+[2025-11-17 20:18:53,510] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2025-11-17 20:18:53,511] {filesystem.py:58} INFO - Poking for file /data/test.txt
+[2025-11-17 20:18:58,520] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2025-11-17 20:18:58,521] {filesystem.py:58} INFO - Poking for file /data/test.txt
+[2025-11-17 20:19:03,533] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2025-11-17 20:19:03,534] {filesystem.py:58} INFO - Poking for file /data/test.txt
+[2025-11-17 20:19:08,545] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2025-11-17 20:19:08,545] {filesystem.py:58} INFO - Poking for file /data/test.txt
+[2025-11-17 20:19:13,556] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2025-11-17 20:19:13,557] {filesystem.py:58} INFO - Poking for file /data/test.txt
+[2025-11-17 20:19:18,568] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2025-11-17 20:19:18,569] {filesystem.py:58} INFO - Poking for file /data/test.txt
+[2025-11-17 20:19:18,569] {filesystem.py:63} INFO - Found File /data/test.txt last modified: 20251117201918
+[2025-11-17 20:19:18,569] {base.py:301} INFO - Success criteria met. Exiting.
+[2025-11-17 20:19:18,576] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=Sprin4_Task1, task_id=waiting_for_file, execution_date=20251117T201842, start_date=20251117T201843, end_date=20251117T201918
+[2025-11-17 20:19:18,586] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-11-17 20:19:18,601] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,26 @@
+[2024-06-15 19:16:25,490] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group1.waiting_for_file_user_activity_log scheduled__2024-04-22T00:00:00+00:00 [queued]>
+[2024-06-15 19:16:25,499] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group1.waiting_for_file_user_activity_log scheduled__2024-04-22T00:00:00+00:00 [queued]>
+[2024-06-15 19:16:25,499] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-15 19:16:25,499] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-15 19:16:25,499] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-15 19:16:25,537] {taskinstance.py:1377} INFO - Executing <Task(FileSensor): group1.waiting_for_file_user_activity_log> on 2024-04-22 00:00:00+00:00
+[2024-06-15 19:16:25,544] {standard_task_runner.py:52} INFO - Started process 1527 to run task
+[2024-06-15 19:16:25,547] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Sprin4_Task711', 'group1.waiting_for_file_user_activity_log', 'scheduled__2024-04-22T00:00:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_autocheck.py', '--cfg-path', '/tmp/tmpstrbzvj4', '--error-file', '/tmp/tmp_z5sbsin']
+[2024-06-15 19:16:25,547] {standard_task_runner.py:80} INFO - Job 30: Subtask group1.waiting_for_file_user_activity_log
+[2024-06-15 19:16:25,739] {task_command.py:369} INFO - Running <TaskInstance: Sprin4_Task711.group1.waiting_for_file_user_activity_log scheduled__2024-04-22T00:00:00+00:00 [running]> on host 22ba72ddea2e
+[2024-06-15 19:16:25,963] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=Sprin4_Task711
+AIRFLOW_CTX_TASK_ID=group1.waiting_for_file_user_activity_log
+AIRFLOW_CTX_EXECUTION_DATE=2024-04-22T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-04-22T00:00:00+00:00
+[2024-06-15 19:16:26,015] {base.py:68} INFO - Using connection ID 'fs_local' for task execution.
+[2024-06-15 19:16:26,015] {filesystem.py:58} INFO - Poking for file /lessons/data/user_activity_log.csv
+[2024-06-15 19:16:26,016] {filesystem.py:63} INFO - Found File /lessons/data/user_activity_log.csv last modified: 20221208060834
+[2024-06-15 19:16:26,016] {base.py:301} INFO - Success criteria met. Exiting.
+[2024-06-15 19:16:26,079] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=Sprin4_Task711, task_id=group1.waiting_for_file_user_activity_log, execution_date=20240422T000000, start_date=20240615T191625, end_date=20240615T191626
+[2024-06-15 19:16:26,097] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-06-15 19:16:26,257] {local_task_job.py:273} INFO - 4 downstream tasks scheduled from follow-on schedule check

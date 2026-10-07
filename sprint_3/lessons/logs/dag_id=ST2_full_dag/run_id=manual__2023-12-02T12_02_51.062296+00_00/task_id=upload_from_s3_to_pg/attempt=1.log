@@ -1,0 +1,41 @@
+[2023-12-02 12:04:12,164] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.upload_from_s3_to_pg manual__2023-12-02T12:02:51.062296+00:00 [queued]>
+[2023-12-02 12:04:12,171] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.upload_from_s3_to_pg manual__2023-12-02T12:02:51.062296+00:00 [queued]>
+[2023-12-02 12:04:12,171] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-02 12:04:12,172] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-12-02 12:04:12,172] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-02 12:04:12,185] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): upload_from_s3_to_pg> on 2023-12-02 12:02:51.062296+00:00
+[2023-12-02 12:04:12,190] {standard_task_runner.py:52} INFO - Started process 1309 to run task
+[2023-12-02 12:04:12,193] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'ST2_full_dag', 'upload_from_s3_to_pg', 'manual__2023-12-02T12:02:51.062296+00:00', '--job-id', '107', '--raw', '--subdir', 'DAGS_FOLDER/st_dag.py', '--cfg-path', '/tmp/tmpzsjqcv6_', '--error-file', '/tmp/tmpv2qlm2q9']
+[2023-12-02 12:04:12,194] {standard_task_runner.py:80} INFO - Job 107: Subtask upload_from_s3_to_pg
+[2023-12-02 12:04:12,367] {task_command.py:369} INFO - Running <TaskInstance: ST2_full_dag.upload_from_s3_to_pg manual__2023-12-02T12:02:51.062296+00:00 [running]> on host 1ebf31cf1116
+[2023-12-02 12:04:12,573] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=ST2_full_dag
+AIRFLOW_CTX_TASK_ID=upload_from_s3_to_pg
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-02T12:02:51.062296+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-02T12:02:51.062296+00:00
+[2023-12-02 12:04:12,631] {logging_mixin.py:115} INFO - report_ids is ['TWpBeU15MHhNaTB3TWxReE1qb3dNam8xTkFsaWNubGhlbWRwYmkxelpYSm5aUT09']
+[2023-12-02 12:04:12,680] {base.py:68} INFO - Using connection ID 'pg_connection' for task execution.
+[2023-12-02 12:04:13,397] {logging_mixin.py:115} INFO - df_customer_research 0df_customer_research 7df_customer_research 14df_customer_research 21df_customer_research 28df_customer_research 35df_customer_research 42df_customer_research 49df_customer_research 56df_customer_research 63df_customer_research 70df_customer_research 77df_customer_research 84df_customer_research 91df_customer_research 98df_customer_research 105df_customer_research 112df_customer_research 119df_customer_research 126df_customer_research 133df_customer_research 140df_customer_research 147df_customer_research 154df_customer_research 161df_customer_research 168df_customer_research 175df_customer_research 182df_customer_research 189df_customer_research 196df_customer_research 203df_customer_research 210df_customer_research 217df_customer_research 224df_customer_research 231df_customer_research 238df_customer_research 245df_customer_research 252df_customer_research 259df_customer_research 266df_customer_research 273df_customer_research 280df_customer_research 287df_customer_research 294df_customer_research 301df_customer_research 308df_customer_research 315df_customer_research 322df_customer_research 329df_customer_research 336df_customer_research 343df_customer_research 350df_customer_research 357df_customer_research 364df_customer_research 371df_customer_research 378df_customer_research 385df_customer_research 392df_customer_research 399df_customer_research 406df_customer_research 413df_customer_research 420df_customer_research 427df_customer_research 434df_customer_research 441df_customer_research 448df_customer_research 455df_customer_research 462df_customer_research 469df_customer_research 476df_customer_research 483df_customer_research 490df_customer_research 497df_customer_research 504df_customer_research 511df_customer_research 518df_customer_research 525df_customer_research 532df_customer_research 539df_customer_research 546df_customer_research 553df_customer_research 560df_customer_research 567df_customer_research 574df_customer_research 581df_customer_research 588df_customer_research 595df_customer_research 602df_customer_research 609df_customer_research 616df_customer_research 623df_customer_research 630df_customer_research 637df_customer_research 644df_customer_research 651df_customer_research 658df_customer_research 665df_customer_research 672df_customer_research 679df_customer_research 686Index(['id', 'date_time', 'city_id', 'city_name', 'customer_id', 'first_name',
+       'last_name', 'item_id', 'item_name', 'quantity', 'payment_amount'],
+      dtype='object')
+[2023-12-02 12:04:13,408] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/st_dag.py", line 126, in upload_from_s3_to_pg
+    cur.execute(insert_uol.replace('{uol_val}',uol_val))
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "user_order_log_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+[2023-12-02 12:04:13,466] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=ST2_full_dag, task_id=upload_from_s3_to_pg, execution_date=20231202T120251, start_date=20231202T120412, end_date=20231202T120413
+[2023-12-02 12:04:13,484] {standard_task_runner.py:92} ERROR - Failed to execute job 107 for task upload_from_s3_to_pg (duplicate key value violates unique constraint "user_order_log_pkey"
+DETAIL:  Key (id)=(1) already exists.
+; 1309)
+[2023-12-02 12:04:13,503] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-12-02 12:04:13,635] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

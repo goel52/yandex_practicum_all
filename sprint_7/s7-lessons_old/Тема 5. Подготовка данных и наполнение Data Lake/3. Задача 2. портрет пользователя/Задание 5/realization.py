@@ -1,0 +1,1 @@
+/usr/lib/spark/bin/spark-submit --master yarn --deploy-mode cluster user_interests.py 2022-05-04 7 /user/vasilyevol/data/events /user/data/tmp/interests_d7

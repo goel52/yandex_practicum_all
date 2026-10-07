@@ -1,0 +1,29 @@
+[2024-06-12 09:35:56,587] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 553_postgresql_export_dag.load_customer_research scheduled__2024-06-10T00:00:00+00:00 [queued]>
+[2024-06-12 09:35:56,598] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 553_postgresql_export_dag.load_customer_research scheduled__2024-06-10T00:00:00+00:00 [queued]>
+[2024-06-12 09:35:56,599] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-12 09:35:56,599] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-12 09:35:56,600] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-12 09:35:56,635] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_customer_research> on 2024-06-10 00:00:00+00:00
+[2024-06-12 09:35:56,642] {standard_task_runner.py:52} INFO - Started process 420 to run task
+[2024-06-12 09:35:56,647] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '553_postgresql_export_dag', 'load_customer_research', 'scheduled__2024-06-10T00:00:00+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/tmp_dag.py', '--cfg-path', '/tmp/tmplp5emq95', '--error-file', '/tmp/tmplnj6a52u']
+[2024-06-12 09:35:56,649] {standard_task_runner.py:80} INFO - Job 189: Subtask load_customer_research
+[2024-06-12 09:35:56,900] {task_command.py:369} INFO - Running <TaskInstance: 553_postgresql_export_dag.load_customer_research scheduled__2024-06-10T00:00:00+00:00 [running]> on host d29a6a2ebe77
+[2024-06-12 09:35:57,180] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=553_postgresql_export_dag
+AIRFLOW_CTX_TASK_ID=load_customer_research
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-10T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-10T00:00:00+00:00
+[2024-06-12 09:35:57,294] {logging_mixin.py:115} INFO -                date_id  category_id  geo_id  sales_qty  sales_amt
+0  2022-05-13T00:00:00         1001       1          2        486
+1  2022-05-13T00:00:00         1001       2          1        243
+2  2022-05-13T00:00:00         1001       3          6       1458
+3  2022-05-13T00:00:00         1002       1          0          0
+4  2022-05-13T00:00:00         1002       2          6       1458
+[2024-06-12 09:35:57,429] {python.py:173} INFO - Done. Returned value was: None
+[2024-06-12 09:35:57,499] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=553_postgresql_export_dag, task_id=load_customer_research, execution_date=20240610T000000, start_date=20240612T093556, end_date=20240612T093557
+[2024-06-12 09:35:57,570] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-06-12 09:35:57,741] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

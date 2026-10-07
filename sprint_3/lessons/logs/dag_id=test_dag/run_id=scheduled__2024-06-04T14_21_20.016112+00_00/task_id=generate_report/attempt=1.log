@@ -1,0 +1,25 @@
+[2024-06-05 14:21:56,410] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test_dag.generate_report scheduled__2024-06-04T14:21:20.016112+00:00 [queued]>
+[2024-06-05 14:21:56,418] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test_dag.generate_report scheduled__2024-06-04T14:21:20.016112+00:00 [queued]>
+[2024-06-05 14:21:56,418] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-05 14:21:56,419] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-05 14:21:56,419] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-05 14:21:56,432] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): generate_report> on 2024-06-04 14:21:20.016112+00:00
+[2024-06-05 14:21:56,434] {standard_task_runner.py:52} INFO - Started process 45009 to run task
+[2024-06-05 14:21:56,436] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'test_dag', 'generate_report', 'scheduled__2024-06-04T14:21:20.016112+00:00', '--job-id', '170', '--raw', '--subdir', 'DAGS_FOLDER/test_dag.py', '--cfg-path', '/tmp/tmppram9fpm', '--error-file', '/tmp/tmprr9w9av7']
+[2024-06-05 14:21:56,437] {standard_task_runner.py:80} INFO - Job 170: Subtask generate_report
+[2024-06-05 14:21:56,626] {task_command.py:369} INFO - Running <TaskInstance: test_dag.generate_report scheduled__2024-06-04T14:21:20.016112+00:00 [running]> on host d29a6a2ebe77
+[2024-06-05 14:21:56,848] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=student@example.com
+AIRFLOW_CTX_DAG_OWNER=student
+AIRFLOW_CTX_DAG_ID=test_dag
+AIRFLOW_CTX_TASK_ID=generate_report
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-04T14:21:20.016112+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-04T14:21:20.016112+00:00
+[2024-06-05 14:21:56,849] {logging_mixin.py:115} INFO - 2024-06-04
+[2024-06-05 14:21:56,849] {python.py:173} INFO - Done. Returned value was: None
+[2024-06-05 14:21:56,908] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=test_dag, task_id=generate_report, execution_date=20240604T142120, start_date=20240605T142156, end_date=20240605T142156
+[2024-06-05 14:21:56,951] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-06-05 14:21:57,079] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

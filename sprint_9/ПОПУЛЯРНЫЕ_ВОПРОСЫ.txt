@@ -1,0 +1,62 @@
+У тебя после деплоя ошибка в логах, Видимо  связана с тем, что у тебя мак на M чипе
+Там другая архитектура
+Поможет прописать в докер файл
+FROM amd64/python:3.9-slim
+И делать build с указанием платформы
+docker build . --platform=linux/amd64 -t cr.yandex/{registry}/stg_service:v2023-09-19-r2
+
+
+
+@vasilyevoleg  получилось запустить через helm и таблица заполнилась данными, спасибо!:
+главное удалить все deployments и pods и версию свежую проставить в values.yml и при сборке образа.
+
+еще модифицировала app (не знаю повлияло ли или нет): добавила бесконечный цикл и use_reloader=True
+ # стартуем Flask-приложение.
+    app.run(debug=True, host='0.0.0.0', use_reloader=True)
+    while(1):
+        print("I'm running!")
+
+команды сейчас работают такие:
+dulcissa@Dell:/mnt/c/Users/Dell/.../sprint-9-sample-service/service_stg$ kubectl get deployments
+NAME          READY   UP-TO-DATE   AVAILABLE   AGE
+stg-service   1/1     1            1           10m
+
+dulcissa@Dell:/mnt/c/Users/Dell/.../sprint-9-sample-service/service_stg$ kubectl delete deployment stg-service
+deployment.apps "stg-service" deleted
+
+dulcissa@Dell:/mnt/c/Users/Dell/.../sprint-9-sample-service/service_stg$ docker build . -t cr.yandex/crp34hpgc0i710bjg215/stg_service:v2024-03-09-r20
+
+dulcissa@Dell:/mnt/c/Users/Dell/.../sprint-9-sample-service/service_stg$ docker push cr.yandex/crp34hpgc0i710bjg215/stg_service:v2024-03-09-r20
+
+dulcissa@Dell:/mnt/c/Users/Dell/.../sprint-9-sample-service/service_stg$ helm upgrade --install stg-service app -n "c19-shhenina-valentina"
+Release "stg-service" has been upgraded. Happy Helming!
+NAME: stg-service
+LAST DEPLOYED: Sun Mar 10 18:40:09 2024
+NAMESPACE: c19-shhenina-valentina
+STATUS: deployed
+REVISION: 46
+TEST SUITE: None
+
+dulcissa@Dell:/mnt/c/Users/Dell/.../sprint-9-sample-service/service_stg$ kubectl get deployments
+NAME          READY   UP-TO-DATE   AVAILABLE   AGE
+stg-service   1/1     1            1           7s
+
+логи смотреть так (в том числе если будут ошибки в python):
+
+dulcissa@Dell:/mnt/c/Users/Dell/.../sprint-9-sample-service/service_stg$ kubectl get pods
+NAME                           READY   STATUS    RESTARTS   AGE
+stg-service-7c4d7dcd48-t8hfc   1/1     Running   0          26s
+
+dulcissa@Dell:/mnt/c/Users/Dell/.../sprint-9-sample-service/service_stg$ kubectl logs stg-service-7c4d7dcd48-t8hfc
+
+и надо проверить права на pull в registry, почему-то они слетают
+
+
+upd: Может кому полезно будет, грохнул секрет 'kubectl delete secret sh.helm.release.v1.sprint9-test.v1' и повторил команду helm upgrade
+
+
+
+привет! Если данные не идут, попроьбуй удалить топик del_topik.sh
+зарегать топик занвоо reg_kafka.sh
+Потом отправить тестовое сообщене  kafka_send_test_message.sh (оно должно сразу придти ) и подаждть минут 5-7
+пока запустится стриминг в этот топик от нашего сервсиа

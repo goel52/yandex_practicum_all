@@ -1,0 +1,36 @@
+# ---- Virtual environments & dependency caches ----
+venv/
+.venv/
+venv17/
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# ---- OS / IDE noise ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ---- Secrets: private keys, tokens, certificates / truststores ----
+ssh_key
+ssh_private_key
+*.pem
+*.jks
+*.jceks
+*.p12
+*.pfx
+*.token
+.check_service_token
+1.txt
+
+# ---- Files larger than 50 MB (kept on disk, not pushed) ----
+demo_medium.sql
+demo_small.sql
+sprint_6_old/dialogs.csv
+sprint_2/demo-small-20170815.sql
+s6-lessons/plugins/snowflake.metabase-driver.jar
+sprint_6_old/s6-lessons/plugins/snowflake.metabase-driver.jar

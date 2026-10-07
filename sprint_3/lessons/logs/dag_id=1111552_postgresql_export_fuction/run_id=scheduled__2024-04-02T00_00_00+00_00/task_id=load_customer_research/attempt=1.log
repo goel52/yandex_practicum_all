@@ -1,0 +1,34 @@
+[2024-04-03 19:23:04,983] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 1111552_postgresql_export_fuction.load_customer_research scheduled__2024-04-02T00:00:00+00:00 [queued]>
+[2024-04-03 19:23:04,995] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 1111552_postgresql_export_fuction.load_customer_research scheduled__2024-04-02T00:00:00+00:00 [queued]>
+[2024-04-03 19:23:04,996] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-03 19:23:04,997] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-03 19:23:04,998] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-03 19:23:05,018] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_customer_research> on 2024-04-02 00:00:00+00:00
+[2024-04-03 19:23:05,030] {standard_task_runner.py:52} INFO - Started process 937 to run task
+[2024-04-03 19:23:05,033] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '1111552_postgresql_export_fuction', 'load_customer_research', 'scheduled__2024-04-02T00:00:00+00:00', '--job-id', '231', '--raw', '--subdir', 'DAGS_FOLDER/st_dag.py', '--cfg-path', '/tmp/tmpbwfvduen', '--error-file', '/tmp/tmpoh66cowx']
+[2024-04-03 19:23:05,034] {standard_task_runner.py:80} INFO - Job 231: Subtask load_customer_research
+[2024-04-03 19:23:05,261] {task_command.py:369} INFO - Running <TaskInstance: 1111552_postgresql_export_fuction.load_customer_research scheduled__2024-04-02T00:00:00+00:00 [running]> on host b8dc254fa961
+[2024-04-03 19:23:05,510] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=1111552_postgresql_export_fuction
+AIRFLOW_CTX_TASK_ID=load_customer_research
+AIRFLOW_CTX_EXECUTION_DATE=2024-04-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-04-02T00:00:00+00:00
+[2024-04-03 19:23:05,511] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/st_dag.py", line 25, in load_file_to_pg
+    df = pd.read_csv(
+  File "/usr/local/lib/python3.8/dist-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+TypeError: read_csv() got an unexpected keyword argument 'index'
+[2024-04-03 19:23:05,577] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=1111552_postgresql_export_fuction, task_id=load_customer_research, execution_date=20240402T000000, start_date=20240403T192304, end_date=20240403T192305
+[2024-04-03 19:23:05,598] {standard_task_runner.py:92} ERROR - Failed to execute job 231 for task load_customer_research (read_csv() got an unexpected keyword argument 'index'; 937)
+[2024-04-03 19:23:05,622] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-04-03 19:23:05,769] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

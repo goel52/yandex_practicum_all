@@ -1,0 +1,99 @@
+version: "3.9"
+
+services:
+  sample-service:
+    build:
+      context: ./sample_service
+      network: host
+    image: sample_service:local
+    container_name: sample_service_container
+    environment:
+      FLASK_APP: ${FLASK_APP_NAME:-sample_service}
+      DEBUG: ${FLASK_SAMPLE_SERVICE_DEBUG:-True}
+    network_mode: "bridge"
+    ports:
+      - "5004:5000"
+    restart: unless-stopped
+
+  sample-flask-app:
+    build:
+      context: ./sample_flask_app
+      network: host
+    image: sample_flask_app:local
+    container_name: sample_flask_app_container
+    environment:
+      FLASK_APP: ${FLASK_APP_NAME:-sample_flask_app}
+      DEBUG: ${FLASK_SAMPLE_SERVICE_DEBUG:-True}
+    network_mode: "bridge"
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  redis_service:
+    build:
+      context: ./redis_data_service
+      network: host
+    image: redis_data_service:local
+    container_name: redis_data_service_container
+    environment:
+      FLASK_APP: ${REDIS_SERVICE_APP:-redis_data_service}
+      DEBUG: ${REDIS_SERVICE_DEBUG:-True}
+
+    network_mode: "bridge"
+    ports:
+      - "5001:5000"
+    restart: unless-stopped
+
+  order_gen_service:
+    build:
+      context: ./order_gen_service
+      network: host
+    image: order_gen_service:local
+    container_name: order_gen_service_service_container
+    environment:
+      FLASK_APP: ${ORDER_GEN_SERVICE_APP:-order_gen_service}
+      DEBUG: ${ORDER_GEN_SERVICE_DEBUG:-True}
+
+      DB_CONTROLPLANE_HOST: ${DB_CONTROLPLANE_HOST}
+      DB_CONTROLPLANE_PORT: ${DB_CONTROLPLANE_PORT}
+      DB_CONTROLPLANE_DATABASE: ${DB_CONTROLPLANE_DATABASE}
+      DB_CONTROLPLANE_USERNAME: ${DB_CONTROLPLANE_USERNAME}
+      DB_CONTROLPLANE_PASSWORD: ${DB_CONTROLPLANE_PASSWORD}
+
+      DB_TRANSACTION_QUEUE_HOST: ${DB_TRANSACTION_QUEUE_HOST}
+      DB_TRANSACTION_QUEUE_PORT: ${DB_TRANSACTION_QUEUE_PORT}
+      DB_TRANSACTION_QUEUE_DATABASE: ${DB_TRANSACTION_QUEUE_DATABASE}
+      DB_TRANSACTION_QUEUE_USERNAME: ${DB_TRANSACTION_QUEUE_USERNAME}
+      DB_TRANSACTION_QUEUE_PASSWORD: ${DB_TRANSACTION_QUEUE_PASSWORD}
+
+      REST_DB_MONGO_USER: ${REST_DB_MONGO_USER}
+      REST_DB_MONGO_PASSWORD: ${REST_DB_MONGO_PASSWORD}
+      REST_DB_MONGO_HOST: ${REST_DB_MONGO_HOST}
+      REST_DB_MONGO_REPLICA_SET: ${REST_DB_MONGO_REPLICA_SET}
+      REST_DB_MONGO_AUTH_DB: ${REST_DB_MONGO_AUTH_DB}
+      REST_DB_MONGO_MAIN_DB: ${REST_DB_MONGO_MAIN_DB}
+    network_mode: "bridge"
+    ports:
+      - "5002:5000"
+    restart: unless-stopped
+
+  postgresql_check_service:
+    build:
+      context: ./postgres_check_service
+      network: host
+    image: postgres_check_service:local
+    container_name: postgres_check_service_container
+    environment:
+      FLASK_APP: ${REDIS_SERVICE_APP:-postgres_check_service}
+      DEBUG: ${REDIS_SERVICE_DEBUG:-True}
+
+      DB_CONTROLPLANE_HOST: ${DB_CONTROLPLANE_HOST}
+      DB_CONTROLPLANE_PORT: ${DB_CONTROLPLANE_PORT}
+      DB_CONTROLPLANE_DATABASE: ${DB_CONTROLPLANE_DATABASE}
+      DB_CONTROLPLANE_USERNAME: ${DB_CONTROLPLANE_USERNAME}
+      DB_CONTROLPLANE_PASSWORD: ${DB_CONTROLPLANE_PASSWORD}
+
+    network_mode: "bridge"
+    ports:
+      - "5003:5000"
+    restart: unless-stopped

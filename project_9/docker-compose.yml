@@ -1,0 +1,16 @@
+version: '3'
+services:
+  sprint-final:
+    image: cr.yandex/crp1r8pht0n0gl25aug1/de-final-prj:latest
+    ports:
+      - 8998:8998
+      - 8280:8280
+      - 15432:5432
+    volumes:
+      ##- mydb:/var/lib/postgresql
+      - ./lessons:/lessons/
+
+volumes:
+  mydb:
+
+

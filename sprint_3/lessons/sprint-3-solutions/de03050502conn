@@ -1,0 +1,8 @@
+airflow connections add 'create_files_api' \
+    --conn-json '{
+        "conn_type": "http",
+        "host": " https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net",
+        "extra": {
+            "api_key": "5f55e6c0-e9e5-4a9c-b313-63c01fc31460"
+        }
+    }'

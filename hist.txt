@@ -1,0 +1,1545 @@
+docker ps
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_0/lessons/1. Ѓ�перу�д, к окру�жениу�/6. Ѓ�ак работает Docker-тренажу�р/submit.py"
+docker ps
+docker exec -it cc7513552b18 ls /
+docker exec -it cc7513552b18 ls /lessons
+docker exec -it cc7513552b18 ls /lessons/dags
+docker exec -it cc7513552b18 ls -al /lessons/dags
+brew install htop
+htop
+ps aux
+ps aux
+history | grep kill
+cat ~/.zsh_history | grep kill
+docker run -it --network=host -v "/Users/Oleg/yandex_pracktikum/CA.pem:/data/CA.pem"  edenhill/kcat:1.7.1 -b rc1a-gt2f0qohskh0ub42.mdb.yandexcloud.net:9091 -X security.protocol=SASL_SSL -X sasl.mechanisms=SCRAM-SHA-512 -X sasl.username="producer_consumer" -X sasl.password="password" -X ssl.ca.location=/data/CA.pem -L
+docker run -it --network=host -v "/Users/Oleg/yandex_pracktikum/CA.pem:/data/CA.pem"  edenhill/kcat:1.7.1 -b rc1a-gt2f0qohskh0ub42.mdb.yandexcloud.net:9091 -X security.protocol=SASL_SSL -X sasl.mechanisms=SCRAM-SHA-512 -X sasl.username="producer_consumer" -X sasl.password="password" -X ssl.ca.location=/data/CA.pem -L
+docker ps
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_9/s9-lessons/Ѓ�ема 5. Ѓ�аписание первого сервиса/6. Ѓ�аписание логики сервиса/Ѓ�адание 5/submit.py"
+cat ~/.zsh_history | grep metabase
+docker run -d --rm  -p 3333:3000 --name metabase metabase/metabase
+docker run -d --rm  -p 3333:3000 --name metabase metabase/metabase
+docker stop $(docker ps -q)
+docker run -d -p 3334:3000 --name=de-metabase metabase/metabase 
+docker ps
+docker stop $(docker ps -q)
+docker run -d -p 3334:3000 --name=de-metabase metabase/metabase
+docker start dbcae9d8e2ff28f3d67babed4615e9aa14e8084453cb1eea05b1a8d6c21fcbcb
+docker stop $(docker ps -q)
+docker run -d --rm  -p 3334:3000 --name=de-metabase metabase/metabase
+docker rm -f dbcae9d8e2ff28f3d67babed4615e9aa14e8084453cb1eea05b1a8d6c21fcbcb
+docker run -d --rm  -p 3334:3000 --name=de-metabase metabase/metabase
+cat ~/.zsh_history 
+docker ps
+docker stop $(docker ps -q)
+jupyter notebook
+docker stop $(docker ps -q)
+htop
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_3/lessons/2. Ѓ�нализ вводну�у� по задау�е/7. Ѓ�сполу�зование у�айлов и подклу�у�ение к Ѓ�Ѓ�/Ѓ�адание 1/tmp.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_3/lessons/2. Ѓ�нализ вводну�у� по задау�е/7. Ѓ�сполу�зование у�айлов и подклу�у�ение к Ѓ�Ѓ�/Ѓ�адание 1/tmp.py"
+ps aux >> tt.csv
+cat tt.csv
+ps aux
+docker ps
+docker exec -it 5f70421e2c84 ls -al /lessons/dags
+docker exec -it 5f70421e2c84 ls -al /lessons/dags/stg
+docker exec -it 5f70421e2c84 ls -al /lessons/dags/stg/init_schema_dag/ddl
+docker exec -it 5f70421e2c84 ls -al /opt/airflow/certificates/
+docker ps
+docker exec -it 5f70421e2c84 ls -al /lessons/dags
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 3. Ѓ�роектирование DWH/6. Ѓ�роектирование слоу� STG/Ѓ�адание 1/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 3. Ѓ�роектирование DWH/6. Ѓ�роектирование слоу� STG/Ѓ�адание 2/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 3. Ѓ�роектирование DWH/6. Ѓ�роектирование слоу� STG/Ѓ�адание 3/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 1/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 2/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 3/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 4/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 1/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 2/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 3/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 4/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 5/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 1/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 2/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 3/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 4/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 5/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 6/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 7/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 7/submit.py"
+python --veriosn
+python --version
+python -m pip install airflow
+python -m pip install apache-airflow 
+docker stop $(docker ps -q)
+docker ps
+cat ~/.zsh_history | grep docker
+cat ~/.zsh_history | grep yc
+yc container image list --registry-id crp1r8pht0n0gl25aug1
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker ps
+jupyter notebook
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+ls
+docker ps
+docker cp tt.csv 1ebf31cf1116:/lessons
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker ps
+docker stop $(docker ps -q)
+cat ~/.zsh_history | grep yc
+yc container image list --registry-id crp1r8pht0n0gl25aug1
+docker stop $(docker ps -q)
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 4/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 4/submit.py"
+jupyter notebook
+docker stop $(docker ps -q)
+ps aux
+docker stop $(docker ps -q)
+docker ps
+docker stop $(docker ps -q)
+docker ps
+docker exec -it 3c95d10692f5 ls -al /lessons/dags/stg/bonus_system 
+cd yandex_pracktikum/sprint_5/s5-lessons
+git remote -v
+docker ps
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker ps
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+cd ~/
+jupyter notebook
+docker ps
+docker stop $(docker ps -q)
+docker ps
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker ps
+docker ps
+docker stop $(docker ps -q)
+jupyter notebook
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+cat ~/.zsh_history | ND
+cat ~/.zsh_history | grep ND
+cat ~/.zsh_history | grep ssh
+docker stop $(docker ps -q)
+docker ps
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker ps
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 6/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 6/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 5/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 6/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 7/submit.py"
+docker stop $(docker ps -q)
+docker pull cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-0:v2023-05-31-r1
+docker pull cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-0:v2023-05-31-r1
+docker pull cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-0:latest
+jupyter notebook
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+curl --location --request GET 'https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/couriers?sort_field={'id'}&sort_direction={'asc'}&limit={'50'}&offset={'0'}' \\
+--header 'X-Nickname: {'dimitry_sharov'}' \\
+--header 'X-Cohort: {'19'}' \\
+--header 'X-API-KEY: {'25c27781-8fde-4b30-a22e-524044a7580f'}'
+curl --location --request GET 'https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/couriers?sort_field={'id'}&sort_direction={'asc'}&limit={'50'}&offset={'0'}' \\
+--header 'X-Nickname: {'dimitry_sharov'}' \\
+--header 'X-Cohort: {'19'}' \\
+--header 'X-API-KEY': {'25c27781-8fde-4b30-a22e-524044a7580f'}'
+curl --location --request GET 'https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/couriers?sort_field={'id'}&sort_direction={'asc'}&limit={'50'}&offset={'0'}' \\
+--header 'X-Nickname': 'dimitry_sharov' \\
+--header 'X-Cohort: '19' \\
+--header 'X-API-KEY': '25c27781-8fde-4b30-a22e-524044a7580f'
+curl --location --request GET "https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/couriers?sort_field=id&sort_direction=asc&limit=50&offset=0" \\
+--header 'X-Nickname': 'dimitry_sharov' \\
+--header 'X-Cohort: '19' \\
+--header 'X-API-KEY': '25c27781-8fde-4b30-a22e-524044a7580f'
+curl --location --request GET "https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/couriers?sort_field=id&sort_direction=asc&limit=50&offset=0" \\
+--header 'X-Nickname': 'dimitry_sharov' \\
+--header 'X-Cohort': '19' \\
+--header 'X-API-KEY': '25c27781-8fde-4b30-a22e-524044a7580f'
+curl --location --request GET "https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/deliveries/?sort_field=order_ts&sort_direction=asc&&offset=0"  --header "X-Nickname: Prokhorova-T-V" --header "X-Cohort: 11" --header "X-API-KEY: 25c27781-8fde-4b30-a22e-524044a7580f" --insecure
+docker stop $(docker ps -q)
+curl --location --request GET "https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/deliveries/?sort_field=order_ts&sort_direction=asc&&offset=0"  --header "X-Nickname: Prokhorova-T-V" --header "X-Cohort: 11" --header "X-API-KEY: 25c27781-8fde-4b30-a22e-524044a7580f" --insecure
+docker stop $(docker ps -q)
+docker start 3c95d10692f5
+docker ps
+docker stop $(docker ps -q)
+cd yandex_pracktikum/project_2/de-project-sprint-2/
+git remote -v
+docker stop $(docker ps -q)
+cd ~/
+curl --location --request GET 'https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/deliveries/?sort_field=order_ts&sort_direction=asc&&offset=0'  --header 'X-Nickname: Prokhorova-T-V' --header 'X-Cohort: 11' --header 'X-API-KEY: 25c27781-8fde-4b30-a22e-524044a7580f' --insecure
+docker stop $(docker ps -q)
+curl --GET https://storage.yandexcloud.net/sprint6/dialogs.csv 
+wget  https://storage.yandexcloud.net/sprint6/dialogs.csv
+brew install wget
+curl --GET https://storage.yandexcloud.net/sprint6/dialogs.csv > dialogs.csv 
+pwd
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+jupyter notebook
+docker stop $(docker ps -q)
+docker ps
+docker ps
+docker stop $(docker ps -q)
+cat ~/.zsh_history | grep deliveries
+curl --location --request GET 'https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/deliveries/?sort_field=order_ts&sort_direction=asc&&offset=0'  --header 'X-Nickname: Prokhorova-T-V' --header 'X-Cohort: 11' --header 'X-API-KEY: 25c27781-8fde-4b30-a22e-524044a7580f' --insecure\
+: 1702935162:0;cat ~/.zsh_history | grep deliveries
+docker ps
+docker exec -it 109d9b078061 whoami
+touch mem.csv
+vim mem.csv 
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 3.  Ѓ�азработка аналитиу�еской базу� данну�у�/6. Ѓ�азработка аналитиу�еского у�ранилиу�а/Ѓ�адание 2/submit.py"
+docker [s]
+docker ps
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+docker stop $(docker ps -q)
+jupyter notebook
+cat ~/.zsh_history | grep curl
+curl --location --request GET 'https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/deliveries/?sort_field=order_ts&sort_direction=asc&&offset=0'  --header 'X-Nickname: Prokhorova-T-V' --header 'X-Cohort: 11' --header 'X-API-KEY: 25c27781-8fde-4b30-a22e-524044a7580f' --insecure
+docker ps
+history | grep kernel
+history | grep python
+cat ~/.zsh_history | grep kernel
+docker ps
+docker stop $(docker ps -q)
+cat ~/.zsh_history | grep yc
+yc container image list --registry-id crp1r8pht0n0gl25aug1
+docker stop $(docker ps -q)
+cd yandex_pracktikum/sprint_5/s5-lessons
+git remote -v
+docker run -d -p 3000:3000 -p 15432:5432 --name=de-sprint-4-server-local crp1r8pht0n0gl25aug1/sprint-4:latest
+docker pull crp1r8pht0n0gl25aug1/sprint-4-arm64
+cd ~/
+docker ps
+docker exec -it 3c95d10692f5 /lessons/dags/tt.py
+docker exec -it 3c95d10692f5 ls -al /lessons/dags/
+docker exec -it 3c95d10692f5 python3 /lessons/dags/tt.py
+docker exec -it 3c95d10692f5 airflow list_dags
+docker exec -it 3c95d10692f5 airflow list_dags [-h] [-sd SUBDIR] [-r]
+docker exec -it 3c95d10692f5 airflow list_dags -h 
+docker exec -it 3c95d10692f5 airflow dags
+docker exec -it 3c95d10692f5 airflow dags list
+docker stop $(docker ps -q)
+jupyter notebook
+python -m ipykernel install --name=env_kernel_TEST
+sudo python -m ipykernel install --name=env_kernel_TEST
+python
+sudo python -m ipykernel install --name=env_kernel_TEST
+sudo python3 -m ipykernel install --name=env_kernel_TEST
+cat ~/.zsh_history | grep ipykernel
+sudo python3.11 -m ipykernel install --name=env_kernel_test
+sudo python3.12 -m ipykernel install --name=env_kernel_test
+sudo python -m ipykernel install --name=env_kernel_test
+which python
+sudo /usr/local/bin/python3.11 -m ipykernel install --name=env_kernel_test
+jupyter notebook
+sudo /usr/local/bin/python3.11 -m ipykernel install --name=env_kernel_test_2
+jupyter notebook
+cat ~/.zsh_history | grep 8157
+cat ~/.zsh_history | grep ssh
+ssh -i /Users/oleg/yandex_pracktikum/sprint_8/ssh_private_key yc-user@51.250.73.35
+cd yandex_pracktikum/project_2/
+ls
+cd de-project-sprint-2/
+git remote -v
+ssh -i /Users/oleg/yandex_pracktikum/sprint_8/ssh_private_key yc-user@158.160.111.179\
+
+ssh -i /Users/oleg/ssh_private_key yc-user@158.160.111.179
+cd ~/
+cat ~/.zsh_history | grep ssh
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@158.160.111.179
+cd yandex_pracktikum/sprint_6/s6-lessons/
+git remote -v
+docker stop $(docker ps -q)
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 2. Ѓ�обираем требованиу� и изу�у�аем истоу�ники/4. Ѓ�зу�у�аем данну�е в PostgreSQL/Ѓ�адание 1/submit.py"
+docker ps
+cd ~/
+cat ~/.zsh_history | grep ssh
+docker ps
+docker ps
+docker exec -it 14650077a9bc ls /
+docker ps
+docker exec -it dce15870cce9 ls /
+docker exec -it dce15870cce9 ls /etc
+docker exec -it dce15870cce9 ls /
+docker exec -it dce15870cce9 ls /opt/
+docker exec -it dce15870cce9 ls /opt/airflow
+docker exec -it dce15870cce9 ls /opt/airflow/airflow.cfg
+docker ps
+cat ~/.zsh_history | grep airflow
+docker ps
+docker exec -it dce15870cce9 cat  /opt/airflow/airflow.cfg | grep airflow
+docker exec -it dce15870cce9 cat  /opt/airflow/airflow.cfg | grep airflow_home
+docker exec -it dce15870cce9 cat  /opt/airflow/airflow.cfg | grep airflow_folder
+docker exec -it dce15870cce9 cat  /opt/airflow/airflow.cfg | grep lessons
+docker exec -it dce15870cce9 cat  /opt/airflow/airflow.cfg | grep dags_folder
+docker images
+docker images
+docker rmi -f 134230dc82c2
+docker ps
+pwd
+touch t.py
+vim t.py
+source /Users/oleg/yandex_pracktikum/venv/bin/activate
+/Users/oleg/yandex_pracktikum/venv/bin/python /Users/oleg/yandex_pracktikum/t.py
+/Users/oleg/yandex_pracktikum/venv/bin/python /Users/oleg/yandex_pracktikum/t.py
+python3 -m venv venv
+source venv/bin/activate
+python t.py
+/Users/oleg/yandex_pracktikum/venv/bin/python /Users/oleg/yandex_pracktikum/t.py
+pip install chardet
+/Users/oleg/yandex_pracktikum/venv/bin/python /Users/oleg/yandex_pracktikum/t.py
+/Users/oleg/yandex_pracktikum/venv/bin/python
+/Users/oleg/yandex_pracktikum/venv/bin/python "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 4. PySpark длу� инженера данну�у�/10. Ѓ�ерекладу�ваем данну�е из Raw в ODS/Ѓ�адание 2/submit.py"
+/Users/oleg/yandex_pracktikum/venv/bin/python "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 4. PySpark длу� инженера данну�у�/10. Ѓ�ерекладу�ваем данну�е из Raw в ODS/Ѓ�адание 2/submit.py"
+/Users/oleg/yandex_pracktikum/venv/bin/python "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 4. PySpark длу� инженера данну�у�/10. Ѓ�ерекладу�ваем данну�е из Raw в ODS/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3.12 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 4/submit.py"
+python3.12 -m pip install requests
+which python 
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 4/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 4/submit.py"
+/usr/local/bin/python3.11 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 4/submit.py"
+docker ps
+docker stop $(docker ps -q)
+docker pull cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-0
+docker pull cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-0:v2023-05-31-r1
+docker pull cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-0:v2023-05-31-r1
+docker pull cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-0:latest
+cat ~/.zsh_history | grep kafkacat
+cat ~/.zsh_history | grep kcat
+docker run -it --network=host -v "/Users/Oleg/yandex_pracktikum/CA.pem:/data/CA.pem"  edenhill/kcat:1.7.1 -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.n:9091 -X security.protocol=SASL_SSL -X sasl.mechanisms=SCRAM-SHA-512 -X sasl.username="de-student" -X sasl.password="ltcneltyn" -X ssl.ca.location=/root/CA.pem -t base -P
+docker run -it --network=host -v "/Users/Oleg/yandex_pracktikum/CA.pem:/data/CA.pem"  edenhill/kcat:1.7.1 -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.n:9091 -X security.protocol=SASL_SSL -X sasl.mechanisms=SCRAM-SHA-512 -X sasl.username="de-student" -X sasl.password="ltcneltyn" -X ssl.ca.location=/data/CA.pem -t base -P
+docker run -it --network=host -v "/Users/Oleg/yandex_pracktikum/CA.pem:/data/CA.pem"  edenhill/kcat:1.7.1 -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -X security.protocol=SASL_SSL -X sasl.mechanisms=SCRAM-SHA-512 -X sasl.username="de-student" -X sasl.password="ltcneltyn" -X ssl.ca.location=/data/CA.pem -t base -P
+cat ~/.zsh_history | grep cutl
+
+cat ~/.zsh_history | grep curl
+sudo spctl --master-disable
+sudo spctl --master-disable
+curl --location --request POST 'https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net/generate_report' \\
+--header 'X-Nickname: TEST' \\
+--header 'X-Cohort: 21' \\
+--header 'X-Project: True' \\
+--header 'X-API-KEY: X-API-KEY' \\
+--data-raw ''
+curl --location --request POST 'https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net/generate_report' \\
+--header 'X-Nickname: TEST' \\
+--header 'X-Cohort: 21' \\
+--header 'X-Project: True' \\
+--header 'X-API-KEY: 5f55e6c0-e9e5-4a9c-b313-63c01fc31460 \\
+--data-raw ''
+curl --location --request POST 'https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net/generate_report' \\
+--header 'X-Nickname: TEST' \\
+--header 'X-Cohort: 21' \\
+--header 'X-Project: True' \\
+--header 'X-API-KEY: 5f55e6c0-e9e5-4a9c-b313-63c01fc31460' \\
+--data-raw ''
+curl --location --request POST 'https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net/generate_report' --header 'X-Nickname: TEST' --header 'X-Cohort: 21' --header 'X-Project: True' --header 'X-API-KEY: 5f55e6c0-e9e5-4a9c-b313-63c01fc31460' --data-raw ''
+cat ~/.zsh_history | grep pip
+which python
+/usr/local/bin/python3.11 -m pip list
+/usr/local/bin/python3.12 -m pip list
+/opt/homebrew/bin/pydoc3.12 -m pip list
+/opt/homebrew/bin/python3.12 -m pip lists
+/opt/homebrew/bin/python3.12 -m pip list
+/opt/homebrew/bin/python3.12 -m pip list
+/opt/homebrew/bin/python3.12 -m pip install requests
+/opt/homebrew/bin/python3.12 -m pip install system-wide
+python3.12 -m pip install --upgrade pip
+docker ps
+docker ps
+docker exec -it 07362e9b5fb4 ls -al /lessons/dags/SQL_inits/
+docker exec -it 07362e9b5fb4 cat /lessons/dags/SQL_inits/stg_init.sql
+jupyter notebook
+cat ~/.zsh_history | grep curl
+docker ps
+docker stop $(docker ps -q)
+docker ps
+docker pull 6559d86daad2
+jupyter notebook
+python3.12 setup.py install --single-version-externally-managed
+python setup.py install --single-version-externally-managed
+which python3
+python3 --version
+python3 -m install boto3
+python3 -m pip install boto3
+docker stop $(docker ps -q)
+curl --location --request GET 'https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net/get_report?task_id=MjAyNC0wMS0yM1QyMTowMjowMwlURVNU' --header 'X-Nickname: Test' --header 'X-Cohort: 21' --header 'X-Project: True' --header 'X-API-KEY: 5f55e6c0-e9e5-4a9c-b313-63c01fc31460'
+cat ~/.zsh_history | grep curl
+curl --location --request GET 'https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net/get_report?task_id=MjAyNC0wMS0yNFQxOTozNDozMAlURVNU' --header 'X-Nickname: Test' --header 'X-Cohort: 21' --header 'X-Project: True' --header 'X-API-KEY: 5f55e6c0-e9e5-4a9c-b313-63c01fc31460'
+curl --location --request GET 'https://d5dg1j9kt695d30blp03.apigw.yandexcloud.net/get_report?task_id=MjAyNC0wMS0yNFQxOTozNDozMAlURVNU' --header 'X-Nickname: TEST' --header 'X-Cohort: 21' --header 'X-Project: True' --header 'X-API-KEY: 5f55e6c0-e9e5-4a9c-b313-63c01fc31460'
+cd yandex_pracktikum/sprint_5/s5-lessons
+git remote -v
+/usr/local/bin/python3.11 /Users/oleg/yandex_pracktikum/sprint_6/get_file.py
+pip install boto3
+pip3 install boto3
+python3.11 -m pip install boto3
+which python3.11
+which python3.12
+python3.12 -m pip install boto3
+which python
+which python3
+which python3.12
+/opt/homebrew/bin/python3.12 -m pip list
+/opt/homebrew/bin/python3.12 -m pip install boto3
+brew intall python3.12
+brew install python3.12
+python3.12
+python3.12 pip install requests
+python3.12 -m pip install requests
+/opt/homebrew/bin/python3 /Users/oleg/yandex_pracktikum/sprint_6/get_file.py
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 5. Ѓ�одготовка данну�у� и наполнение Data Lake/3. Ѓ�адау�а 2. портрет полу�зователу�/Ѓ�адание 6/submit.py"
+pip3 install requests
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 5. Ѓ�одготовка данну�у� и наполнение Data Lake/3. Ѓ�адау�а 2. портрет полу�зователу�/Ѓ�адание 6/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 5. Ѓ�одготовка данну�у� и наполнение Data Lake/3. Ѓ�адау�а 2. портрет полу�зователу�/Ѓ�адание 6/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 5. Ѓ�одготовка данну�у� и наполнение Data Lake/3. Ѓ�адау�а 2. портрет полу�зователу�/Ѓ�адание 6/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 5. Ѓ�одготовка данну�у� и наполнение Data Lake/3. Ѓ�адау�а 2. портрет полу�зователу�/Ѓ�адание 6/submit.py"
+cd yandex_pracktikum/sprint_6/s6-lessons/
+ls
+cd Ѓ�ема\ 2.\ Ѓ�налитиу�еские\ Ѓ�УЃ�Ѓ�.\ Vertica/
+ls
+cd 5.\ Ѓ�апису�\ данну�у�\ в\ Vertica\ у�асту�\ 2/
+pwd
+ls
+cd Ѓ�адание\ 2/
+ls
+pwd
+cat '/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/5. Ѓ�апису� данну�у� в Vertica у�асту� 2/Ѓ�адание 2/members.csv'
+cd '/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/'
+pwd
+ls
+cd 11.\ Удаление\ и\ обновление\ данну�у�\ в\ Vertica/
+ls
+cd Ѓ�адание\ 3/
+pwd
+docker ps
+docker ps
+docker ps
+docker ps
+docker exec -it 39560166294b pip install vertica-python
+docker exec -it 39560166294b pip list
+docker exec -it 39560166294b pip install vertica_python
+docker ps
+docker exec -it 39560166294b pip install vertica-python
+docker exec -it 39560166294b pip install apache-airflow-providers-vertica
+docker stop $(docker ps -q)
+cd ~/yandex_pracktikum/project_3/dags/
+vim student_dag.py
+docker ps
+docker  exec -it 6559d86daad2 ls -al /lessons/dags
+docker  exec -it 6559d86daad2 ls -al /lessons/dags/sql
+ls
+cd sql
+vim insert_into_f_sales.sql
+docker  exec -it 6559d86daad2 ls -al /lessons/dags/sql
+docker logs 6559d86daad2
+docker ps
+docker ps
+docker ps
+docker ps
+docker ps
+docker  logs 98e8c3285891
+docker  exec -it 98e8c3285891 /lessons/dags/sql
+docker  exec -it 98e8c3285891 /lessons/
+docker  exec -it 98e8c3285891 ls -al  /lessons/
+docker  exec -it 98e8c3285891 ls -al  /lessons/dags/sql
+docker  exec -it 98e8c3285891 cat /lessons/dags/sql/update_customer_retention.sql
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/11. Удаление и обновление данну�у� в Vertica/Ѓ�адание 3/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/11. Удаление и обновление данну�у� в Vertica/Ѓ�адание 3/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/5. Ѓ�апису� данну�у� в Vertica у�асту� 2/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/5. Ѓ�апису� данну�у� в Vertica у�асту� 2/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/5. Ѓ�апису� данну�у� в Vertica у�асту� 2/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/11. Удаление и обновление данну�у� в Vertica/Ѓ�адание 3/realization.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/11. Удаление и обновление данну�у� в Vertica/Ѓ�адание 3/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/11. Удаление и обновление данну�у� в Vertica/Ѓ�адание 3/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/11. Удаление и обновление данну�у� в Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3
+docker pull cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-6:latest
+cd yandex_pracktikum/sprint_6/s6-lessons/
+git pull
+git pull -f
+git add -a
+git add a.
+git add -all
+git add --all
+git commit -m "a"
+git pull
+git remote -v
+cd ../
+ls
+mkdir s6
+cd s6
+git clone https://github.com/practicum-de/s6-lessons.git
+docker images 
+docker rmi -f cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-6 
+docker images
+python
+cd ~/
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@158.160.111.179
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@84.201.134.245
+cat /Users/oleg/ssh_private_key 
+chmod 400 /Users/oleg/ssh_private_key 
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@84.201.134.245
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@84.201.134.245
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@62.84.117.32\
+
+зу�в
+docker ps
+docker stop $(docker ps -q)
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/5. Ѓ�апису� данну�у� в Vertica у�асту� 2/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/realization.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/realization.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/realization.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 2. Ѓ�налитиу�еские Ѓ�УЃ�Ѓ�. Vertica/3. Ѓ�накомство с Vertica/Ѓ�адание 1/submit.py"
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@158.160.109.183\
+
+docker run -d  -p 3000:3000 -p 15432:5432 --name=de-sprint-4-server-local sindb/sprint-4:latest
+docker ps
+docker stop 46223e66dafd
+docker run -d  -p 3000:3000 -p 15432:5432 --name=de-sprint-4-server-local sindb/sprint-4:latest
+docker start 46223e66dafda65c1b5088a61812e5d91246319eb765bb57d6c1eaa926b22367
+docker ps
+docker stop 46223e66dafda65c1b5088a61812e5d91246319eb765bb57d6c1eaa926b22367
+docker stop $(docker ps -q)
+docker ps
+docker exec -it a37d0d0b83a8 ls -al /data/
+docker exec -it a37d0d0b83a8 ls -al /data/
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@158.160.109.183\
+
+docker ps
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@51.250.88.89\
+
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 3.  Ѓ�азработка аналитиу�еской базу� данну�у�/4. Ѓ�роверка кау�ества данну�у�/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 3.  Ѓ�азработка аналитиу�еской базу� данну�у�/4. Ѓ�роверка кау�ества данну�у�/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 3.  Ѓ�азработка аналитиу�еской базу� данну�у�/4. Ѓ�роверка кау�ества данну�у�/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 2. Ѓ�обираем требованиу� и изу�у�аем истоу�ники/4. Ѓ�зу�у�аем данну�е в PostgreSQL/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 2. Ѓ�обираем требованиу� и изу�у�аем истоу�ники/4. Ѓ�зу�у�аем данну�е в PostgreSQL/Ѓ�адание 1/submit.py"
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@51.250.88.89\
+
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@158.160.124.180\
+
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@62.84.117.248\
+
+docker ps
+cd yandex_pracktikum/sprint_5/s5-lessons
+git remote -v
+docker ps
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 3. Ѓ�роектирование DWH/8. Ѓ�роектирование слоу� DDS/Ѓ�адание 9/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 3. Ѓ�роектирование DWH/8. Ѓ�роектирование слоу� DDS/Ѓ�адание 9/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 3. Ѓ�роектирование DWH/9. Ѓ�роектирование ETL между� слоу�ми/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 3. Ѓ�роектирование DWH/9. Ѓ�роектирование ETL между� слоу�ми/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 3. Ѓ�роектирование DWH/9. Ѓ�роектирование ETL между� слоу�ми/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 3.  Ѓ�азработка аналитиу�еской базу� данну�у�/3. Ѓ�оздадим staging-слой/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 3.  Ѓ�азработка аналитиу�еской базу� данну�у�/3. Ѓ�оздадим staging-слой/Ѓ�адание 1/submit.py"
+\
+curl --location --request GET 'https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/restaurants?sort_field=id&sort_direction=asc&limit=50&offset=0' --header 'X-Nickname: Artem-Merkulov' --header 'X-Cohort: 20' --header 'X-API-KEY: 25c27781-8fde-4b30-a22e-524044a7580f' 
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 3.  Ѓ�азработка аналитиу�еской базу� данну�у�/3. Ѓ�оздадим staging-слой/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 3.  Ѓ�азработка аналитиу�еской базу� данну�у�/3. Ѓ�оздадим staging-слой/Ѓ�адание 1/realization.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_6/s6/s6-lessons/Ѓ�ема 3.  Ѓ�азработка аналитиу�еской базу� данну�у�/3. Ѓ�оздадим staging-слой/Ѓ�адание 1/submit.py"
+docker ps
+docker ps
+docker logs 1e2f1a942252
+docker ps
+docker ps
+docker exec -it 231d04d7bc47 -ls -al /data
+docker exec -it 231d04d7bc47 ls -al /data
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 5. Ѓ�одготовка данну�у� и наполнение Data Lake/2. Ѓ�адау�а 1. обновление справоу�ника тегов/Ѓ�адание 4/submit.py"
+git clone https://github.com/practicum-de/s7-lessons.git
+touch TTTTTTTT
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@62.84.117.248\
+
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@84.201.129.94\
+
+/opt/homebrew/bin/python3.12
+/opt/homebrew/bin/python3.12 "/Users/oleg/s7-lessons/Ѓ�ема 3. Ѓ�накомство со Spark/6. Ѓ�одклу�у�ение к Spark/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3.12 "/Users/oleg/s7-lessons/Ѓ�ема 3. Ѓ�накомство со Spark/6. Ѓ�одклу�у�ение к Spark/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3.12 "/Users/oleg/s7-lessons/Ѓ�ема 3. Ѓ�накомство со Spark/6. Ѓ�одклу�у�ение к Spark/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3.12 "/Users/oleg/s7-lessons/Ѓ�ема 3. Ѓ�накомство со Spark/6. Ѓ�одклу�у�ение к Spark/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/s7-lessons/Ѓ�ема 3. Ѓ�накомство со Spark/6. Ѓ�одклу�у�ение к Spark/Ѓ�адание 1/submit.py"
+spark = SparkSession \\
+    .builder \\
+		.config("spark.driver.cores", "2") \\
+		.config("spark.driver.memory", "1g") \\
+        .appName("My first session") \\
+        .getOrCreate()\
+
+ssh -i /Users/oleg/ssh_private_key  yc-user@51.250.85.166\
+
+ssh -I Downloads/ssh_private_key yc-user@51.250.85.166
+chmod 400 Downloads/ssh_private_key
+ssh -I Downloads/ssh_private_key yc-user@51.250.85.166
+sudo ssh -I Downloads/ssh_private_key yc-user@51.250.85.166
+sudo ssh -i Downloads/ssh_private_key yc-user@51.250.85.166
+docker ps
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+docker ps
+ssh -i Downloads/ssh_private_key yc-user@158.160.118.133\
+
+ssh -i Downloads/ssh_private_key yc-user@158.160.118.133
+ssh -i Downloads/ssh_private_key yc-user@158.160.118.133
+ls 
+ls -al
+vim .ssh/config
+ssh sprint8
+rm /Users/oleg/yandex_pracktikum/sprint_8/ssh_private_key
+mv Downloads/ssh_private_key /Users/oleg/yandex_pracktikum/sprint_8/ssh_private_key
+ssh sprint8
+"key":{"restaurant_id": "123e4567-e89b-12d3-a456-426614174000","adv_campaign_id": "123e4567-e89b-12d3-a456-426614174003","adv_campaign_content": "first campaign","adv_campaign_owner": "Ivanov Ivan Ivanovich","adv_campaign_owner_contact": "iiivanov@restaurant_id","adv_campaign_datetime_start": 1659203516,"adv_campaign_datetime_end": 2659207116,"datetime_created": 1659131516}" | kafkacat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn"  \\
+-X ssl.ca.location=/usr/local/share/ca-certificates/Yandex/YandexCA.crt \\
+-t base \\
+-P \\
+-K:
+"key:{"restaurant_id": "123e4567-e89b-12d3-a456-426614174000","adv_campaign_id": "123e4567-e89b-12d3-a456-426614174003","adv_campaign_content": "first campaign","adv_campaign_owner": "Ivanov Ivan Ivanovich","adv_campaign_owner_contact": "iiivanov@restaurant_id","adv_campaign_datetime_start": 1659203516,"adv_campaign_datetime_end": 2659207116,"datetime_created": 1659131516}" \\
+| docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn"  \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-P \\
+-K:
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning\
+\
+\
+\
+\
+docker run -it -v "/home/yc-user/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning\
+\
+\
+\
+"key:{"restaurant_id": "123e4567-e89b-12d3-a456-426614174000","adv_campaign_id": "123e4567-e89b-12d3-a456-426614174003","adv_campaign_content": "first campaign","adv_campaign_owner": "Ivanov Ivan Ivanovich","adv_campaign_owner_contact": "iiivanov@restaurant_id","adv_campaign_datetime_start": 1659203516,"adv_campaign_datetime_end": 2659207116,"datetime_created": 1659131516}" | docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn"  \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-P \\
+-K:\
+
+"key:{"restaurant_id": "123e4567-e89b-12d3-a456-426614174000","adv_campaign_id": "123e4567-e89b-12d3-a456-426614174003","adv_campaign_content": "first campaign","adv_campaign_owner": "Ivanov Ivan Ivanovich","adv_campaign_owner_contact": "iiivanov@restaurant_id","adv_campaign_datetime_start": 1659203516,"adv_campaign_datetime_end": 2659207116,"datetime_created": 1659131516}" | kafkacat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn"  \\
+-X ssl.ca.location=/usr/local/share/ca-certificates/Yandex/YandexCA.crt \\
+-t base \\
+-P \\
+-K:
+rm /Users/oleg/ssh_private_key \
+
+cat .ssh/config 
+cd Downloads
+pwd
+vim ~/.ssh/config
+ssh sprint8
+rm ssh_private_key
+vim ~/.ssh/config
+rm ssh_private_key
+vim ~/.ssh/config
+тестим 
+ssh sprint8
+работает
+идем в vs code
+jupyter notebook
+cd /Users/oleg/
+history
+cat .zsh_history | grep deliv
+docker run -it -v "/home/yc-user/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+docker run -it -v "/home/yc-user/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+docker run -it -v "/home/yc-user/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+docker run -it -v "/home/yc-user/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/realization.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+pwd
+cd sprint_8/s8-lessons
+git remote -v
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/realization.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+vim .ssh/config
+ssh sprint8
+cat .zsh_history | grep kafcacat
+cat .zsh_history | grep kafka
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+touch old-yet-gold
+vib old-yet-gold
+vim old-yet-gold
+mv old-yet-gold old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P \\
+-l old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+P\
+
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+cat old-yet-gold.txt
+vim  old-yet-gold.txt
+cat old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+pwd
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+cat /Users/oleg/old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+cat /Users/oleg/old-yet-gold.txt
+cat /Users/oleg/old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+cat /Users/oleg/old-yet-gold.txt
+vim  old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+cat /Users/oleg/old-yet-gold.txt
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/run_producer.py"
+/opt/homebrew/bin/python3 /Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/settings.py
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/run_producer.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/realization.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/run_producer.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/submit.py"
+cat /Users/oleg/old-yet-gold.txt
+vim test
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+cat /Users/oleg/old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P \\
+-l
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P \\
+-l
+cat /Users/oleg/old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P \\
+-l /Users/oleg/old-yet-gold.txt
+cat /Users/oleg/old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P \\
+-l /Users/oleg/old-yet-gold.txt
+cp /Users/oleg/old-yet-gold.txt /Users/oleg/yandex_pracktikum/sprint_8/
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/:/data/" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P \\
+-l /Users/oleg/old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/:/data/" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P \\
+-l /data/old-yet-gold.txt
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/CA.pem:/data/CA.pem" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-C \\
+-o beginning
+docker run -it -v "/Users/oleg/yandex_pracktikum/sprint_8/:/data/" \\
+ --network=host edenhill/kcat:1.7.1 \\
+ kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L \\
+-X security.protocol=SASL_SSL \\
+-X sasl.mechanisms=SCRAM-SHA-512 \\
+-X sasl.username="de-student" \\
+-X sasl.password="ltcneltyn" \\
+-X ssl.ca.location=/data/CA.pem \\
+-t base \\
+-K: \\
+-P \\
+-l /data/old-yet-gold.txt
+docker [s]
+docker ps
+cat .zsh_history | grep ND
+ssh -i /Users/oleg/ssh_private_key  -ND 8157 yc-user@84.201.134.245
+ssh -i /Users/oleg/Downloads/ssh_private_key  -ND 8157 yc-user@84.201.134.245
+rm /Users/oleg/ssh_private_key \
+
+rm Downloads/ssh_private_key 
+ssh -i /Users/oleg/Downloads/ssh_private_key  -ND 8157 yc-user@84.201.134.245
+ssh -i /Users/oleg/Downloads/ssh_private_key  -ND 8157 yc-user@178.154.202.98
+ssh -i /Users/oleg/Downloads/ssh_private_key  yc-user@51.250.91.190\
+
+jupyter notebook
+xattr -cr /Applications/LiesofP.app && codesign --force --deep --sign - /Applications/LiesofP.app
+cat .zsh_history | grep ssh
+ssh -i /Users/oleg/Downloads/ssh_private_key  -ND 8157 yc-user@178.154.202.98
+rm Downloads/ssh_private_key 
+ssh -i /Users/oleg/Downloads/ssh_private_key  -ND 8157 yc-user@51.250.69.243\
+
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/8. Ѓ�роектирование ву�у�одного сообу�ениу�/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/8. Ѓ�роектирование ву�у�одного сообу�ениу�/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/8. Ѓ�роектирование ву�у�одного сообу�ениу�/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/8. Ѓ�роектирование ву�у�одного сообу�ениу�/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/8. Ѓ�роектирование ву�у�одного сообу�ениу�/Ѓ�адание 2/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/run_producer.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/submit.py"
+ rm Downloads/ssh_private_key 
+ssh -i /Users/oleg/Downloads/ssh_private_key  -ND 8157 yc-user@51.250.7.235\
+
+rm Downloads/ssh_private_key 
+ssh -i /Users/oleg/Downloads/ssh_private_key  -ND 8157 yc-user@84.201.159.56
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/main.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_class_meth.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_class_meth.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_class_meth.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_class_meth.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_class_meth.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_lessons.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_lessons.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_lessons.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_lessons.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_lessons.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_lessons.py
+/Users/oleg/pythonOOP/venv/bin/python /Users/oleg/pythonOOP/1_4_class_meth.py
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+jupyter notebook
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_2/4. Ѓ�одготовка скриптов миграу�ии/12. Ѓ�ак сделату� копиу� базу�/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_2/4. Ѓ�одготовка скриптов миграу�ии/12. Ѓ�ак сделату� копиу� базу�/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/9. Ѓ�тправка сообу�ениу� в Kafka/Ѓ�адание 1/submit.py"
+/opt/homebrew/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+jupyter notebook
+jupyter kernelspec
+jupyter kernelspec uninstall env_kernel_test
+sudo jupyter kernelspec uninstall env_kernel_test
+sudo jupyter kernelspec uninstall env_kernel_test_2
+sudo jupyter kernelspec uninstall env_kernel_3.11
+sudo jupyter kernelspec uninstall env_kernel
+jupyter notebook
+sudo jupyter kernelspec uninstall ipykernel
+brew doctor
+which python3
+which python
+brew uninstall --ignore-dependencies python3
+brew uninstall --ignore-dependencies python
+brew uninstall --ignore-dependencies python3.11
+brew uninstall --ignore-dependencies python@3.11
+ls /opt/homebrew/Cellar/
+brew uninstall --ignore-dependencies python@3.12
+which python
+ls  /usr/local/bin
+cd Library
+ls
+sudo rm -rf Python
+sudo rm -rf  �/Applications/Python �\
+sudo rm -rf /Library/Frameworks/Python.framework\
+sudo rm -rf /usr/local/bin/python
+udo rm -rf /usr/bin/python3
+udo rm -rf /usr/bin/python
+sudo rm -rf /usr/bin/python
+sudo rm -rf /usr/bin/python3
+ls /usr/bin/python3
+which python
+sudo rm -rf /usr/local/bin/python3.11
+which python
+python --version
+cd ~/
+cat .bash_profile
+vim .bash_profile
+python
+python3
+which python3
+ls /usr/bin/python3
+cat /usr/bin/python3
+ls /usr/bin/
+brew uninstall python
+brew uninstall python@4.12
+brew uninstall python@3.12
+brew install python@3.12
+python3 --version
+python3.12 --version
+jupyter notebook
+python3.12 -m ipykernel install --user --name=python3_12_kernel
+pip install ipykernel
+pip3 install ipykernel
+python3.12 -m ipykernel install --user --name=python3_12_kernel
+python3.12 -m pip install ipykernel 
+which python3.12
+ls /opt/homebrew/bin/python3.12
+ls /opt/homebrew/bin/
+cat  /opt/homebrew/bin/python3.12-config
+brew doctor
+cd /usr/lib/
+l
+ls
+cd /opt/homebrew/Cellar/
+ls -al
+cd python@3.12/
+ls
+cd 3.12.2/
+ls
+cd bin
+ls
+cd python@3.12/
+cd ~/
+python3.12 -m venv venv
+source venv/bin/activate
+pip install ipykernel
+python -m ipykernel install --user --name=python3_12_kernel
+which python
+which python3
+python3 -m ipykernel install --user --name=python3_12_kernel
+jupyter notebook
+/Users/oleg/Library/Python/
+ls /Users/oleg/Library/Python/
+ls /Users/oleg/Library
+rm -rf /Users/oleg/Library/
+rm -rf /Users/oleg/Library/Python/
+ls /Users/oleg/Library
+ls /Users/oleg/Library/Python/
+rm -rf /Users/oleg/Library/Python/3.9/
+ls /Users/oleg/Library/Python/
+pip install jupyter notebook
+jupyter notebook
+jupyter notebook
+source venv/bin/activate
+pip list
+which python3
+which python3.12
+pip install spark
+pip install spyspark
+pip3 install pyspark
+jupyter notebook
+pip3 install distutils
+pip3 install setuptools
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 /Users/oleg/Downloads/order_system_orders_dag/main.py
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 /Users/oleg/Downloads/order_system_orders_dag/main.py
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 /Users/oleg/Downloads/order_system_orders_dag/main.py
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 /Users/oleg/Downloads/order_system_orders_dag/main.py
+/Users/oleg/venv/bin/python3 /Users/oleg/Downloads/order_system_orders_dag/main.py
+/Users/oleg/venv/bin/python3 /Users/oleg/Downloads/order_system_orders_dag/main.py
+/Users/oleg/venv/bin/python3 /Users/oleg/Downloads/order_system_orders_dag/main.py
+/Users/oleg/venv/bin/python3 /Users/oleg/Downloads/order_system_orders_dag/main.py
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+jupyter notebook
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+source venv/bin/activate
+python
+jupyter notebook
+jupyter notebook
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+pip3 install requests
+source ../venv/bin/activate
+pip3 install requests
+/usr/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+/usr/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+/usr/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+/usr/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+/usr/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+/usr/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+docker ps
+docker ps
+docker exec -it f358ffd64247 airflowf dag-list
+docker exec -it f358ffd64247 airflowf dags
+docker exec -it f358ffd64247 airflow dags
+docker exec -it f358ffd64247 airflow dags list
+/opt/homebrew/bin/python3.12 /Users/oleg/Downloads/dags/examples/stg/bonus_system_ranks_dag/bonus_system_ranks_dag.py
+/opt/homebrew/bin/python3.12 /Users/oleg/Downloads/dags/examples/stg/bonus_system_ranks_dag/bonus_system_ranks_dag.py
+mkdir yandex_pracktikum_archieve
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+/usr/bin/python3 /Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/dags/stg/bonus_system/stg_bonus_system_dag.py
+/usr/bin/python3 /Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/dags/stg/bonus_system/stg_bonus_system_dag.py
+/opt/homebrew/bin/python3.12 "/Users/oleg/yandex_pracktikum/sprint_9/s9-lessons/Ѓ�ема 5. Ѓ�аписание первого сервиса/6. Ѓ�аписание логики сервиса/Ѓ�адание 1/submit.py"
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 "/Users/oleg/yandex_pracktikum/sprint_9/s9-lessons/Ѓ�ема 5. Ѓ�аписание первого сервиса/6. Ѓ�аписание логики сервиса/Ѓ�адание 1/submit.py"
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 "/Users/oleg/yandex_pracktikum/sprint_9/s9-lessons/Ѓ�ема 5. Ѓ�аписание первого сервиса/6. Ѓ�аписание логики сервиса/Ѓ�адание 1/submit.py"
+cd ./
+cd ..
+source venv/bin/activate
+/opt/homebrew/Cellar/python@3.12/3.12.2/Frameworks/Python.framework/Versions/3.12/bin/python3.12 "/Users/oleg/yandex_pracktikum/sprint_9/s9-lessons/Ѓ�ема 5. Ѓ�аписание первого сервиса/6. Ѓ�аписание логики сервиса/Ѓ�адание 1/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_9/s9-lessons/Ѓ�ема 5. Ѓ�аписание первого сервиса/6. Ѓ�аписание логики сервиса/Ѓ�адание 1/submit.py"
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+cd Library/
+ls
+cd ..
+ls
+ssh -i /Users/oleg/Downloads/ssh_private_key   yc-user@51.250.8.207
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�е\
+ма 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/run_producer.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/run_producer.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/run_producer.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/run_producer.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/run_producer.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/5. Ѓ�реобразование потокову�у� данну�у�/Ѓ�адание 1/submit.py"
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+rm /Users/oleg/ssh_private_key \
+
+ssh -i /Users/oleg/Downloads/ssh_private_key   yc-user@158.160.48.80
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 1/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 2/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 3/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/5. Ѓ�абираем данну�е из PostgreSQL/Ѓ�адание 4/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 1/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 2/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 3/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 4/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/6. Ѓ�абираем данну�е из MongoDB/Ѓ�адание 5/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 1/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_5/s5-lessons/Ѓ�ема 4. Ѓ�еализау�иу� DWH/7. Ѓ�еренос данну�у� из Staging в DDS/Ѓ�адание 2/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_8/s8-lessons/Ѓ�ема 3. Ѓ�астройка потока данну�у�/4. Ѓ�зу�у�ение данну�у� в Kafka со Spark/Ѓ�адание 1/submit.py"
+/Users/oleg/venv/bin/python3 "/Users/oleg/yandex_pracktikum/sprint_7/s7-lessons/Ѓ�ема 4. PySpark длу� инженера данну�у�/9. Ѓ�конну�е у�у�нку�ии в PySpark/Ѓ�адание 3/submit.py"
+cd Downloads
+cd jetbra/
+ду� -у�д
+ls -al
+cd scripts/
+ls -al
+sh install.sh 
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_3_initpy
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+/opt/homebrew/bin/python3.12 /Users/oleg/pythonOOP/1_5_4
+cd ~/
+cat .zsh_history | grep jks
+cat .zsh_history | grep true
+cat .zsh_history | grep store
+/opt/homebrew/bin/python3.12 /Users/oleg/Downloads/s5-lessons/dags/stg_layer_dag.py
+/opt/homebrew/bin/python3.12 /Users/oleg/Downloads/s5-lessons/dags/stg_layer_dag.py
+cat .zsh_history | grep ND
+cat .ssh/config 
+cd yandex_pracktikum/project_6
+cd yandex_pracktikum/project_3/
+ls
+cd ../project_1
+cd ../project_1
+cd ..
+ls
+cd project_3/
+docker ps
+docker run -ti --network=host --name local-postgres -e POSTGRES_PASSWORD=postgres -d postgres
+docker ps
+jupyter notebook
+sudo apt-get install build-dep python-psycopg2
+brew install libpq
+source venv/bin/activate
+cd ~/
+source venv/bin/activate
+pip3 install psycopg2-binary
+python
+which python3
+python3
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+docker run -ti --network=host --name local-postgres -e POSTGRES_PASSWORD=postgres -d postgres\
+
+docker run --rm -ti --network=host --name local-postgres -e POSTGRES_PASSWORD=postgres -d postgres
+docker rmi ad09e62cf48b4561b25c56ab6c448398affd99fa32aa08d5c33bbb2c169a1f56
+docker rm ad09e62cf48b4561b25c56ab6c448398affd99fa32aa08d5c33bbb2c169a1f56
+docker run -ti --network=host --name local-postgres -e POSTGRES_PASSWORD=postgres -d postgres
+docker rm -f  ad09e62cf48b4561b25c56ab6c448398affd99fa32aa08d5c33bbb2c169a1f56
+docker run -ti --network=host --name local-postgres -e POSTGRES_PASSWORD=postgres -d postgres
+docker ps 
+docker stop $(docker ps -q)
+docker run -p 5432:15432 -ti  --network=host --name local-postgres -e POSTGRES_PASSWORD=postgres -d postgres
+docker rm -f aae0a33e954aa412177ea540c1fe952cfef0586549890fe1f716ac571ffd948b
+docker run -p 5432:15432 -ti  --network=host --name local-postgres -e POSTGRES_PASSWORD=postgres -d postgres
+docker ps
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+git --config
+git config --list
+which docker
+which docker-compose
+curl --location --request GET 'https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/deliveries?&sort_field=id&sort_direction=asc&limit=10&offset=0' \\
+--header 'X-Nickname: staceynik' \\
+--header 'X-Cohort: 21' \\
+--header 'X-API-KEY: 25c27781-8fde-4b30-a22e-524044a7580f
+curl --location --request GET 'https://d5d04q7d963eapoepsqr.apigw.yandexcloud.net/deliveries?&sort_field=id&sort_direction=asc&limit=10&offset=0' \\
+--header 'X-Nickname: staceynik' \\
+--header 'X-Cohort: 21' \\
+--header 'X-API-KEY: 25c27781-8fde-4b30-a22e-524044a7580f'
+ssh -i /Users/oleg/Downloads/ssh_private_key   yc-user@http://84.201.134.245
+ssh -i /Users/oleg/Downloads/ssh_private_key   yc-user@84.201.134.245
+rm /Users/oleg/ssh_private_key \
+
+ssh -i /Users/oleg/Downloads/ssh_private_key   yc-user@84.201.134.245
+ssh -i /Users/oleg/Downloads/ssh_private_key   yc-user@51.250.82.197
+ssh -i /Users/oleg/Downloads/ssh_private_key  -ND yc-user@51.250.82.197
+cat .zsh_history | grep ND
+ssh -i /Users/oleg/Downloads/ssh_private_key  -ND 8157 yc-user@51.250.82.197
+rm /Users/oleg/ssh_private_key \
+
+vim .ssh/config
+ssh sprint8
+ssh sprint8
+cat .ssh/config 
+ssh sprint8
+vim .ssh/config
+ssh sprint8
+cat .zsh_history | grep metabase
+/usr/bin/python3 /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /Users/oleg/.vscode/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/zsh/envVars.txt
+/Volumes/CrossOver\ 24.0/Open\ Gatekeeper\ friendly ; exit;
+/Volumes/CrossOver\ 24.0/Open\ Gatekeeper\ friendly ; exit;
+ls
+cd Desktop/
+cd croslic/
+ls
+license.tool
+sudo spctl --master-disable
+/Users/oleg/Desktop/croslic/license.tool ; exit;
+: 1709035821:0;cat .zsh_history | grep wget
+: 1709035824:0;wget https://storage.yandexcloud.net/sprint6/dialogs.csv 
+: 1709035855:0;ls -al
+: 1709035865:0;mkdir tmp
+: 1709035867:0;cd tmp
+: 1709035869:0;ls -al
+: 1709035872:0;wget https://storage.yandexcloud.net/sprint6/dialogs.csv
+: 1709035934:0;ls -al
+: 1709039309:0;cd ~/
+: 1709039319:0;cd yandex_pracktikum/sprint_8/s8-lessons/
+: 1709039323:0;git remote -v
+: 1709145514:0;cd ../
+: 1709145520:0;cd ../
+: 1709145528:0;cd sprint_9/s9-lessons/
+: 1709145531:0;git remote -v
+: 1709228876:0;ipconfig 
+: 1709314522:0;cd ~/
+: 1709314530:0;kubectl getpods
+: 1709314536:0;kubectl get pods
+: 1709314546:0;cat .zsh_history | grep exec
+: 1709314562:0;kubectl get pods
+: 1709314575:0;kubectl exec -it sprint9-test-6fc874d44b-5wj7t ls -al /
+: 1709314583:0;kubectl exec  sprint9-test-6fc874d44b-5wj7t ls -al /
+: 1709314591:0;kubectl exec sprint9-test-6fc874d44b-5wj7t ls -al /
+: 1709314645:0;kubectl exec sprint9-test-6fc874d44b-5wj7t ls
+: 1709314654:0;kubectl exec -it sprint9-test-6fc874d44b-5wj7t ls
+: 1709314663:0;kubectl exec -it sprint9-test-6fc874d44b-5wj7t ls -al
+: 1709314667:0;kubectl exec -it sprint9-test-6fc874d44b-5wj7t ls  /
+: 1709314809:0;kubectl delete sprint9-test
+: 1709314817:0;kubectl delete deployment sprint9-test
+: 1709314825:0;kubectl get pods
+: 1709314829:0;kubectl get pods
+: 1709314830:0;kubectl get pods
+: 1709314831:0;kubectl get pods
+: 1709314836:0;kubectl get pods
+: 1709314837:0;kubectl get pods
+: 1709314839:0;kubectl get pods
+: 1709314840:0;kubectl get pods
+: 1709314848:0;cat .zsh_history | grep dep
+: 1709314884:0;kubectl get pods
+: 1709314937:0;cd yandex_pracktikum/sprint_9/
+: 1709314938:0;ls
+: 1709314952:0;kubectl apply -f dep.yml
+: 1709314961:0;kubectl get pods
+: 1709315024:0;kubectl exec -it sprint9-test-6fc874d44b-v78qs /src/scripts/dist/manifest_dist
+: 1709315092:0;kubectl exec -it sprint9-test-6fc874d44b-v78qs /src/scripts/dist/manifest_test
+: 1709315117:0;kubectl apply -f dep.yml
+: 1709315122:0;kubectl get pods
+: 1709315124:0;kubectl exec -it sprint9-test-6fc874d44b-v78qs /src/scripts/dist/manifest_test
+: 1709336455:0;cd ~/
+: 1709336466:0;cat .zsh_history >>hist.txt

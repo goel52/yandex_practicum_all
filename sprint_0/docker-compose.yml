@@ -1,0 +1,14 @@
+version: '3'
+services:
+  sprint-0:
+    image: cr.yandex/crp1r8pht0n0gl25aug1/de-sprint-0:v2023-05-31-r1
+    ports:
+      - 7010:8000
+    volumes:
+      - mydb:/var/lib/postgresql
+      - ./lessons:/s0-lessons/
+
+volumes:
+  mydb:
+
+     

@@ -1,0 +1,29 @@
+[2024-06-05 00:00:04,185] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 542_s3_load_example.upload_from_s3 scheduled__2024-06-04T00:00:00+00:00 [queued]>
+[2024-06-05 00:00:04,193] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 542_s3_load_example.upload_from_s3 scheduled__2024-06-04T00:00:00+00:00 [queued]>
+[2024-06-05 00:00:04,193] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-05 00:00:04,193] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-05 00:00:04,193] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-05 00:00:04,206] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): upload_from_s3> on 2024-06-04 00:00:00+00:00
+[2024-06-05 00:00:04,214] {standard_task_runner.py:52} INFO - Started process 33105 to run task
+[2024-06-05 00:00:04,216] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '542_s3_load_example', 'upload_from_s3', 'scheduled__2024-06-04T00:00:00+00:00', '--job-id', '136', '--raw', '--subdir', 'DAGS_FOLDER/download_dag_static.py', '--cfg-path', '/tmp/tmpvr9mxnr4', '--error-file', '/tmp/tmp61rnij5e']
+[2024-06-05 00:00:04,216] {standard_task_runner.py:80} INFO - Job 136: Subtask upload_from_s3
+[2024-06-05 00:00:04,396] {task_command.py:369} INFO - Running <TaskInstance: 542_s3_load_example.upload_from_s3 scheduled__2024-06-04T00:00:00+00:00 [running]> on host d29a6a2ebe77
+[2024-06-05 00:00:04,602] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=542_s3_load_example
+AIRFLOW_CTX_TASK_ID=upload_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-04T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-04T00:00:00+00:00
+[2024-06-05 00:00:04,603] {logging_mixin.py:115} INFO - https://storage.yandexcloud.net/s3-sprint3-static/lessons/customer_research.csv
+[2024-06-05 00:00:04,796] {logging_mixin.py:115} INFO - Downloaded customer_research.csv
+[2024-06-05 00:00:04,796] {logging_mixin.py:115} INFO - https://storage.yandexcloud.net/s3-sprint3-static/lessons/user_activity_log.csv
+[2024-06-05 00:00:05,210] {logging_mixin.py:115} INFO - Downloaded user_activity_log.csv
+[2024-06-05 00:00:05,211] {logging_mixin.py:115} INFO - https://storage.yandexcloud.net/s3-sprint3-static/lessons/user_order_log.csv
+[2024-06-05 00:00:06,079] {logging_mixin.py:115} INFO - Downloaded user_order_log.csv
+[2024-06-05 00:00:06,079] {python.py:173} INFO - Done. Returned value was: None
+[2024-06-05 00:00:06,136] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=542_s3_load_example, task_id=upload_from_s3, execution_date=20240604T000000, start_date=20240605T000004, end_date=20240605T000006
+[2024-06-05 00:00:06,196] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-06-05 00:00:06,316] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

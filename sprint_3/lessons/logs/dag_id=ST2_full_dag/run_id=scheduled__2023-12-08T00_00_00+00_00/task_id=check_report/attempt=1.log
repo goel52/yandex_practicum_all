@@ -1,0 +1,19 @@
+[2023-12-18 21:13:34,643] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.check_report scheduled__2023-12-08T00:00:00+00:00 [queued]>
+[2023-12-18 21:13:34,652] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.check_report scheduled__2023-12-08T00:00:00+00:00 [queued]>
+[2023-12-18 21:13:34,652] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-18 21:13:34,653] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-12-18 21:13:34,653] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-18 21:13:34,670] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): check_report> on 2023-12-08 00:00:00+00:00
+[2023-12-18 21:13:34,674] {standard_task_runner.py:52} INFO - Started process 455 to run task
+[2023-12-18 21:13:34,678] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'ST2_full_dag', 'check_report', 'scheduled__2023-12-08T00:00:00+00:00', '--job-id', '175', '--raw', '--subdir', 'DAGS_FOLDER/st_dag.py', '--cfg-path', '/tmp/tmps6jdbaq8', '--error-file', '/tmp/tmp7rq94p4s']
+[2023-12-18 21:13:34,678] {standard_task_runner.py:80} INFO - Job 175: Subtask check_report
+[2023-12-18 21:13:34,882] {task_command.py:369} INFO - Running <TaskInstance: ST2_full_dag.check_report scheduled__2023-12-08T00:00:00+00:00 [running]> on host 1ebf31cf1116
+[2023-12-18 21:13:35,115] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=ST2_full_dag
+AIRFLOW_CTX_TASK_ID=check_report
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-08T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-12-08T00:00:00+00:00

@@ -1,0 +1,18 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sprint9-test
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sprint9-test
+  template:
+    metadata:
+      labels:
+        app: sprint9-test
+    spec:
+      containers:
+      - name: sprint9-test
+        image: cr.yandex/crpe7gmtkh8el8rkf2ub/sample_service:latest

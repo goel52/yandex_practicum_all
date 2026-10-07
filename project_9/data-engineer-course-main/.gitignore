@@ -1,0 +1,10 @@
+.env
+
+.vscode/settings.json
+logs
+YandexInternalRootCA.crt
+
+__pycache__/
+.mypy_cache
+.vscode
+venv

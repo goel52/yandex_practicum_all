@@ -1,0 +1,33 @@
+[2024-06-05 14:19:17,792] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test_dag.generate_report scheduled__2024-05-31T14:19:08.277773+00:00 [queued]>
+[2024-06-05 14:19:17,800] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: test_dag.generate_report scheduled__2024-05-31T14:19:08.277773+00:00 [queued]>
+[2024-06-05 14:19:17,800] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-05 14:19:17,800] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-05 14:19:17,801] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-05 14:19:17,816] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): generate_report> on 2024-05-31 14:19:08.277773+00:00
+[2024-06-05 14:19:17,825] {standard_task_runner.py:52} INFO - Started process 44346 to run task
+[2024-06-05 14:19:17,828] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'test_dag', 'generate_report', 'scheduled__2024-05-31T14:19:08.277773+00:00', '--job-id', '150', '--raw', '--subdir', 'DAGS_FOLDER/test_dag.py', '--cfg-path', '/tmp/tmpv0riwb63', '--error-file', '/tmp/tmp_i7vya_e']
+[2024-06-05 14:19:17,828] {standard_task_runner.py:80} INFO - Job 150: Subtask generate_report
+[2024-06-05 14:19:18,028] {task_command.py:369} INFO - Running <TaskInstance: test_dag.generate_report scheduled__2024-05-31T14:19:08.277773+00:00 [running]> on host d29a6a2ebe77
+[2024-06-05 14:19:18,268] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=student@example.com
+AIRFLOW_CTX_DAG_OWNER=student
+AIRFLOW_CTX_DAG_ID=test_dag
+AIRFLOW_CTX_TASK_ID=generate_report
+AIRFLOW_CTX_EXECUTION_DATE=2024-05-31T14:19:08.277773+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-05-31T14:19:08.277773+00:00
+[2024-06-05 14:19:18,268] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/test_dag.py", line 22, in generate_report
+    print(date)
+NameError: name 'date' is not defined
+[2024-06-05 14:19:18,333] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=test_dag, task_id=generate_report, execution_date=20240531T141908, start_date=20240605T141917, end_date=20240605T141918
+[2024-06-05 14:19:18,356] {standard_task_runner.py:92} ERROR - Failed to execute job 150 for task generate_report (name 'date' is not defined; 44346)
+[2024-06-05 14:19:18,385] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-06-05 14:19:18,528] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

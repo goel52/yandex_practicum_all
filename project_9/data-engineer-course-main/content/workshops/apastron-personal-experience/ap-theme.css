@@ -1,0 +1,10 @@
+/* ap-theme.css */
+/* @theme ap-theme */
+
+@import 'gaia';
+
+section {
+    /* Override default background */
+    background: #111;
+
+}

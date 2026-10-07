@@ -1,0 +1,30 @@
+[2024-06-02 00:00:01,881] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 552_postgresql_export_fuction1.load_file_to_pg scheduled__2024-06-01T00:00:00+00:00 [queued]>
+[2024-06-02 00:00:01,887] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 552_postgresql_export_fuction1.load_file_to_pg scheduled__2024-06-01T00:00:00+00:00 [queued]>
+[2024-06-02 00:00:01,888] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 00:00:01,888] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-02 00:00:01,888] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 00:00:01,902] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_file_to_pg> on 2024-06-01 00:00:00+00:00
+[2024-06-02 00:00:01,909] {standard_task_runner.py:52} INFO - Started process 83609 to run task
+[2024-06-02 00:00:01,912] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '552_postgresql_export_fuction1', 'load_file_to_pg', 'scheduled__2024-06-01T00:00:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/tmp_dag.py', '--cfg-path', '/tmp/tmppk_zdyvz', '--error-file', '/tmp/tmp906n7bmw']
+[2024-06-02 00:00:01,912] {standard_task_runner.py:80} INFO - Job 8: Subtask load_file_to_pg
+[2024-06-02 00:00:02,084] {task_command.py:369} INFO - Running <TaskInstance: 552_postgresql_export_fuction1.load_file_to_pg scheduled__2024-06-01T00:00:00+00:00 [running]> on host d29a6a2ebe77
+[2024-06-02 00:00:02,287] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=552_postgresql_export_fuction1
+AIRFLOW_CTX_TASK_ID=load_file_to_pg
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-06-01T00:00:00+00:00
+[2024-06-02 00:00:02,288] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: load_file_to_pg() missing 3 required positional arguments: 'filename', 'pg_table', and 'conn_args'
+[2024-06-02 00:00:02,342] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=552_postgresql_export_fuction1, task_id=load_file_to_pg, execution_date=20240601T000000, start_date=20240602T000001, end_date=20240602T000002
+[2024-06-02 00:00:02,360] {standard_task_runner.py:92} ERROR - Failed to execute job 8 for task load_file_to_pg (load_file_to_pg() missing 3 required positional arguments: 'filename', 'pg_table', and 'conn_args'; 83609)
+[2024-06-02 00:00:02,372] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-06-02 00:00:02,492] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

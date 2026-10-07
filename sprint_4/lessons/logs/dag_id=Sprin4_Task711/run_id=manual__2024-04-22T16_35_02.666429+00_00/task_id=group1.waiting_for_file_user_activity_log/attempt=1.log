@@ -1,0 +1,36 @@
+[2024-04-22 16:35:08,915] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group1.waiting_for_file_user_activity_log manual__2024-04-22T16:35:02.666429+00:00 [queued]>
+[2024-04-22 16:35:08,923] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group1.waiting_for_file_user_activity_log manual__2024-04-22T16:35:02.666429+00:00 [queued]>
+[2024-04-22 16:35:08,923] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-22 16:35:08,923] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-22 16:35:08,923] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-22 16:35:08,958] {taskinstance.py:1377} INFO - Executing <Task(FileSensor): group1.waiting_for_file_user_activity_log> on 2024-04-22 16:35:02.666429+00:00
+[2024-04-22 16:35:08,966] {standard_task_runner.py:52} INFO - Started process 1967 to run task
+[2024-04-22 16:35:08,969] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Sprin4_Task711', 'group1.waiting_for_file_user_activity_log', 'manual__2024-04-22T16:35:02.666429+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_autocheck.py', '--cfg-path', '/tmp/tmp4yz2ikef', '--error-file', '/tmp/tmpric7c91b']
+[2024-04-22 16:35:08,969] {standard_task_runner.py:80} INFO - Job 10: Subtask group1.waiting_for_file_user_activity_log
+[2024-04-22 16:35:09,142] {task_command.py:369} INFO - Running <TaskInstance: Sprin4_Task711.group1.waiting_for_file_user_activity_log manual__2024-04-22T16:35:02.666429+00:00 [running]> on host 22ba72ddea2e
+[2024-04-22 16:35:09,351] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=Sprin4_Task711
+AIRFLOW_CTX_TASK_ID=group1.waiting_for_file_user_activity_log
+AIRFLOW_CTX_EXECUTION_DATE=2024-04-22T16:35:02.666429+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-04-22T16:35:02.666429+00:00
+[2024-04-22 16:35:09,456] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/sensors/base.py", line 277, in execute
+    poke_return = self.poke(context)
+  File "/usr/local/lib/python3.8/dist-packages/airflow/sensors/filesystem.py", line 55, in poke
+    hook = FSHook(self.fs_conn_id)
+  File "/usr/local/lib/python3.8/dist-packages/airflow/hooks/filesystem.py", line 38, in __init__
+    conn = self.get_connection(conn_id)
+  File "/usr/local/lib/python3.8/dist-packages/airflow/hooks/base.py", line 67, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/usr/local/lib/python3.8/dist-packages/airflow/models/connection.py", line 430, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `fs_local` isn't defined
+[2024-04-22 16:35:09,459] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=Sprin4_Task711, task_id=group1.waiting_for_file_user_activity_log, execution_date=20240422T163502, start_date=20240422T163508, end_date=20240422T163509
+[2024-04-22 16:35:09,476] {standard_task_runner.py:92} ERROR - Failed to execute job 10 for task group1.waiting_for_file_user_activity_log (The conn_id `fs_local` isn't defined; 1967)
+[2024-04-22 16:35:09,478] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-04-22 16:35:09,606] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,6 @@
+apiVersion: v2
+name: de-sprint-7-checks
+description: Practicum DE Sprint 7 checks with local PySpark
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

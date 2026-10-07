@@ -1,0 +1,40 @@
+[2023-12-01 12:42:16,732] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.upload_from_s3_to_pg manual__2023-12-01T12:40:55.306818+00:00 [queued]>
+[2023-12-01 12:42:16,740] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.upload_from_s3_to_pg manual__2023-12-01T12:40:55.306818+00:00 [queued]>
+[2023-12-01 12:42:16,740] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-01 12:42:16,740] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-12-01 12:42:16,740] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-01 12:42:16,753] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): upload_from_s3_to_pg> on 2023-12-01 12:40:55.306818+00:00
+[2023-12-01 12:42:16,759] {standard_task_runner.py:52} INFO - Started process 790 to run task
+[2023-12-01 12:42:16,762] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'ST2_full_dag', 'upload_from_s3_to_pg', 'manual__2023-12-01T12:40:55.306818+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/st_dag.py', '--cfg-path', '/tmp/tmpif48gn8w', '--error-file', '/tmp/tmpewt3h_6_']
+[2023-12-01 12:42:16,763] {standard_task_runner.py:80} INFO - Job 97: Subtask upload_from_s3_to_pg
+[2023-12-01 12:42:16,936] {task_command.py:369} INFO - Running <TaskInstance: ST2_full_dag.upload_from_s3_to_pg manual__2023-12-01T12:40:55.306818+00:00 [running]> on host 1ebf31cf1116
+[2023-12-01 12:42:17,145] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=ST2_full_dag
+AIRFLOW_CTX_TASK_ID=upload_from_s3_to_pg
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-01T12:40:55.306818+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-01T12:40:55.306818+00:00
+[2023-12-01 12:42:17,203] {logging_mixin.py:115} INFO - report_ids is ['TWpBeU15MHhNaTB3TVZReE1qbzBNRG8xT0FsaWNubGhlbWRwYmkxelpYSm5aUT09']
+[2023-12-01 12:42:17,251] {base.py:68} INFO - Using connection ID 'pg_connection' for task execution.
+[2023-12-01 12:42:18,786] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/st_dag.py", line 123, in upload_from_s3_to_pg
+    cur.execute(insert_uol.replace('{uol_val}',uol_val))
+psycopg2.errors.SyntaxError: INSERT has more expressions than target columns
+LINE 1: ...', 3110, 'Светлана', 'Федорова', 10, 'Томаты', 4, 200), ('b8...
+                                                             ^
+
+[2023-12-01 12:42:18,842] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=ST2_full_dag, task_id=upload_from_s3_to_pg, execution_date=20231201T124055, start_date=20231201T124216, end_date=20231201T124218
+[2023-12-01 12:42:18,861] {standard_task_runner.py:92} ERROR - Failed to execute job 97 for task upload_from_s3_to_pg (INSERT has more expressions than target columns
+LINE 1: ...', 3110, 'Светлана', 'Федорова', 10, 'Томаты', 4, 200), ('b8...
+                                                             ^
+; 790)
+[2023-12-01 12:42:18,887] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-12-01 12:42:19,018] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

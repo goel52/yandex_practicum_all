@@ -1,0 +1,24 @@
+[2023-12-05 17:10:13,907] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.update_mart_d_tables scheduled__2023-12-03T00:00:00+00:00 [queued]>
+[2023-12-05 17:10:13,916] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ST2_full_dag.update_mart_d_tables scheduled__2023-12-03T00:00:00+00:00 [queued]>
+[2023-12-05 17:10:13,916] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-05 17:10:13,916] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-12-05 17:10:13,916] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-05 17:10:13,934] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): update_mart_d_tables> on 2023-12-03 00:00:00+00:00
+[2023-12-05 17:10:13,939] {standard_task_runner.py:52} INFO - Started process 860 to run task
+[2023-12-05 17:10:13,942] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'ST2_full_dag', 'update_mart_d_tables', 'scheduled__2023-12-03T00:00:00+00:00', '--job-id', '129', '--raw', '--subdir', 'DAGS_FOLDER/st_dag.py', '--cfg-path', '/tmp/tmp_a5de86z', '--error-file', '/tmp/tmpkflefhls']
+[2023-12-05 17:10:13,943] {standard_task_runner.py:80} INFO - Job 129: Subtask update_mart_d_tables
+[2023-12-05 17:10:14,142] {task_command.py:369} INFO - Running <TaskInstance: ST2_full_dag.update_mart_d_tables scheduled__2023-12-03T00:00:00+00:00 [running]> on host 1ebf31cf1116
+[2023-12-05 17:10:14,366] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=ST2_full_dag
+AIRFLOW_CTX_TASK_ID=update_mart_d_tables
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-12-03T00:00:00+00:00
+[2023-12-05 17:10:14,419] {base.py:68} INFO - Using connection ID 'pg_connection' for task execution.
+[2023-12-05 17:10:14,667] {python.py:173} INFO - Done. Returned value was: 200
+[2023-12-05 17:10:14,795] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=ST2_full_dag, task_id=update_mart_d_tables, execution_date=20231203T000000, start_date=20231205T171013, end_date=20231205T171014
+[2023-12-05 17:10:14,848] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-12-05 17:10:14,980] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,31 @@
+
+Возможно кому-то поможет решение по проблемe c ssh ключом permission denied. Нужно зайти в свойства файла, удалить всех пользователей оттуда. Изменить владельца на себя и дать полный доступ - https://stackoverflow.com/questions/64687271/how-to-avoid-permission-denied-publickey-ssh-key-windows .
+
+
+https://stackoverflow.com/questions/64687271/how-to-avoid-permission-denied-publickey-ssh-key-windows
+
+
+
+
+DROP TABLE IF EXISTS public."002_DM_clients" CASCADE;
+
+CREATE TABLE IF NOT EXISTS public."002_DM_clients"
+(
+    client_id integer NOT NULL,
+    client_firstname character varying(100) COLLATE pg_catalog."default",
+    client_lastname character varying(100) COLLATE pg_catalog."default",
+    client_email character varying(100) COLLATE pg_catalog."default",
+    client_phone character varying(100) COLLATE pg_catalog."default",
+    client_city character varying(100) COLLATE pg_catalog."default"
+);
+
+
+JgpHFF10rK
+DrElCE9S9m
+
+QMux9JTmnS
+migmmJMYc5
+qnGE3bj6JW
+AFpiqj0bl6
+BXfm0NLx72
+JIh4eP7691

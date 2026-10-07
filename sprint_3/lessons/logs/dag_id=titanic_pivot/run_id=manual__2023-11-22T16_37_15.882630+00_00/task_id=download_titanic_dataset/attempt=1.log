@@ -1,0 +1,23 @@
+[2023-11-22 16:37:19,923] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: titanic_pivot.download_titanic_dataset manual__2023-11-22T16:37:15.882630+00:00 [queued]>
+[2023-11-22 16:37:19,932] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: titanic_pivot.download_titanic_dataset manual__2023-11-22T16:37:15.882630+00:00 [queued]>
+[2023-11-22 16:37:19,932] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-22 16:37:19,932] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-11-22 16:37:19,932] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-11-22 16:37:19,947] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): download_titanic_dataset> on 2023-11-22 16:37:15.882630+00:00
+[2023-11-22 16:37:19,957] {standard_task_runner.py:52} INFO - Started process 1359 to run task
+[2023-11-22 16:37:19,960] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'titanic_pivot', 'download_titanic_dataset', 'manual__2023-11-22T16:37:15.882630+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/tmp_dag.py', '--cfg-path', '/tmp/tmpe6hq42cx', '--error-file', '/tmp/tmpyt9bx4hj']
+[2023-11-22 16:37:19,960] {standard_task_runner.py:80} INFO - Job 71: Subtask download_titanic_dataset
+[2023-11-22 16:37:20,146] {task_command.py:369} INFO - Running <TaskInstance: titanic_pivot.download_titanic_dataset manual__2023-11-22T16:37:15.882630+00:00 [running]> on host cc7513552b18
+[2023-11-22 16:37:20,369] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=titanic_pivot
+AIRFLOW_CTX_TASK_ID=download_titanic_dataset
+AIRFLOW_CTX_EXECUTION_DATE=2023-11-22T16:37:15.882630+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-11-22T16:37:15.882630+00:00
+[2023-11-22 16:37:21,946] {python.py:173} INFO - Done. Returned value was: None
+[2023-11-22 16:37:22,009] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=titanic_pivot, task_id=download_titanic_dataset, execution_date=20231122T163715, start_date=20231122T163719, end_date=20231122T163722
+[2023-11-22 16:37:22,068] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-11-22 16:37:22,205] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

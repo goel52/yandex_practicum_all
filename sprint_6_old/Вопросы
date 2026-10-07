@@ -1,0 +1,21 @@
+db.orders.aggregate([
+  {
+    $match: {
+      date: {
+        $gte: new Date(new Date().setDate(new Date().getDate() - 3))
+      }
+    }
+  },
+  {
+    $group: {
+      _id: { $dateToString: { format: "%Y-%m-%d", date: "$date" } },
+      count: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { count: -1 }
+  },
+  {
+    $limit: 1
+  }
+])

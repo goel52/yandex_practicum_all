@@ -1,0 +1,53 @@
+# Default values for app.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: cr.yandex/crptd146a6rdid9u032u/order_gen_service
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "v2023-04-01-r1"
+
+containerPort: 5000
+
+config:
+  DB_CONTROLPLANE_HOST: "rc1a-lin4beazbvc1t1um.mdb.yandexcloud.net"
+  DB_CONTROLPLANE_PORT: "6432"
+  DB_CONTROLPLANE_DATABASE: "sp9controlplane"
+  DB_CONTROLPLANE_USERNAME: "sp9admin"
+  DB_CONTROLPLANE_PASSWORD: "{password_here}" # pw
+  REST_DB_MONGO_USER: "db-mongo-admin"
+  REST_DB_MONGO_PASSWORD: "{password_here}" # pw
+  REST_DB_MONGO_HOST: "rc1a-ba83ae33hvt4pokq.mdb.yandexcloud.net:27018"
+  REST_DB_MONGO_REPLICA_SET: "rs01"
+  REST_DB_MONGO_AUTH_DB: "db-mongo"
+  REST_DB_MONGO_MAIN_DB: "db-mongo"
+  DB_TRANSACTION_QUEUE_HOST: "rc1b-w5d285tmxa8jimyn.mdb.yandexcloud.net"
+  DB_TRANSACTION_QUEUE_PORT: "6432"
+  DB_TRANSACTION_QUEUE_DATABASE: "db1"
+  DB_TRANSACTION_QUEUE_USERNAME: "service_msg_gen"
+  DB_TRANSACTION_QUEUE_PASSWORD: "{password_here}" # pw
+
+ingress:
+  enabled: true
+  className: "nginx"
+  tls:
+    - hosts:
+        # Измените имя сервиса
+        - order-gen-service.sprint9.tgcloudenv.ru
+  hosts:
+    # Измените имя сервиса
+    - host: order-gen-service.sprint9.tgcloudenv.ru
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi

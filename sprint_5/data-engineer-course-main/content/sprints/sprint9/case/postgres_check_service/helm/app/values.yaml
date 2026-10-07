@@ -1,0 +1,42 @@
+# Default values for app.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: cr.yandex/crprrfjafjnhr7os2f25/postgres_check_service
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "v2023-09-09-r1"
+
+containerPort: 5000
+
+config:
+  DB_CONTROLPLANE_HOST: "rc1a-lin4beazbvc1t1um.mdb.yandexcloud.net"
+  DB_CONTROLPLANE_PORT: "6432"
+  DB_CONTROLPLANE_DATABASE: "sp9controlplane"
+  DB_CONTROLPLANE_USERNAME: "sp9admin"
+  DB_CONTROLPLANE_PASSWORD: "E8J^Gfp^nd%%RkGWeF"
+
+ingress:
+  enabled: true
+  className: "nginx"
+  tls:
+    - hosts:
+        # Измените имя сервиса
+        - postgres-check-service.sprint9.tgcloudenv.ru
+  hosts:
+    # Измените имя сервиса
+    - host: postgres-check-service.sprint9.tgcloudenv.ru
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi

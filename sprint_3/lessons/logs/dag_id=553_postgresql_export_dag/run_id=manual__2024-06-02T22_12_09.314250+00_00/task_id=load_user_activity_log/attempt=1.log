@@ -1,0 +1,29 @@
+[2024-06-02 22:12:15,951] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 553_postgresql_export_dag.load_user_activity_log manual__2024-06-02T22:12:09.314250+00:00 [queued]>
+[2024-06-02 22:12:15,959] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 553_postgresql_export_dag.load_user_activity_log manual__2024-06-02T22:12:09.314250+00:00 [queued]>
+[2024-06-02 22:12:15,960] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 22:12:15,960] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-02 22:12:15,960] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 22:12:15,974] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_user_activity_log> on 2024-06-02 22:12:09.314250+00:00
+[2024-06-02 22:12:15,982] {standard_task_runner.py:52} INFO - Started process 10305 to run task
+[2024-06-02 22:12:15,984] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '553_postgresql_export_dag', 'load_user_activity_log', 'manual__2024-06-02T22:12:09.314250+00:00', '--job-id', '119', '--raw', '--subdir', 'DAGS_FOLDER/tmp_dag.py', '--cfg-path', '/tmp/tmp_5d8gk70', '--error-file', '/tmp/tmp314j6c9l']
+[2024-06-02 22:12:15,985] {standard_task_runner.py:80} INFO - Job 119: Subtask load_user_activity_log
+[2024-06-02 22:12:16,178] {task_command.py:369} INFO - Running <TaskInstance: 553_postgresql_export_dag.load_user_activity_log manual__2024-06-02T22:12:09.314250+00:00 [running]> on host d29a6a2ebe77
+[2024-06-02 22:12:16,403] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=553_postgresql_export_dag
+AIRFLOW_CTX_TASK_ID=load_user_activity_log
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-02T22:12:09.314250+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-06-02T22:12:09.314250+00:00
+[2024-06-02 22:12:16,484] {logging_mixin.py:115} INFO -              date_time  action_id  customer_id  quantity
+0  2022-05-11T00:00:00          2           61        10
+1  2022-05-11T00:00:00          0          660         1
+2  2022-05-11T00:00:00          2          690         6
+3  2022-05-11T00:00:00          2          611        18
+4  2022-05-11T00:00:00          0          561        11
+[2024-06-02 22:12:16,516] {python.py:173} INFO - Done. Returned value was: None
+[2024-06-02 22:12:16,576] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=553_postgresql_export_dag, task_id=load_user_activity_log, execution_date=20240602T221209, start_date=20240602T221215, end_date=20240602T221216
+[2024-06-02 22:12:16,621] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-06-02 22:12:16,755] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

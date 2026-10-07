@@ -1,0 +1,29 @@
+version: '3'
+services:
+  sprint-3:
+    image: cr.yandex/crp1r8pht0n0gl25aug1/sprint-3:latest
+    ports:
+      - 3000:3000
+      - 3002:3002
+      - 15432:5432
+    volumes:
+      # - ./mydb:/var/lib/postgresql
+      - ./dags:/lessons/dags
+
+#volumes:
+#  mydb:
+
+#localhost:3000 - тренажер
+#localhost:3000/airflow - airflow
+#AirflowAdmin
+#airflow_pass
+
+#параметры подключения к бд
+#    dbname="de",
+#    user="jovyan",
+#    password="jovyan",
+#    host="localhost",
+#    port="15432"
+
+
+

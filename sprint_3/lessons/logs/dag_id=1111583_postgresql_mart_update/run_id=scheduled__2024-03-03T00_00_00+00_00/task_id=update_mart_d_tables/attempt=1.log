@@ -1,0 +1,40 @@
+[2024-03-04 18:19:47,212] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 1111583_postgresql_mart_update.update_mart_d_tables scheduled__2024-03-03T00:00:00+00:00 [queued]>
+[2024-03-04 18:19:47,221] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 1111583_postgresql_mart_update.update_mart_d_tables scheduled__2024-03-03T00:00:00+00:00 [queued]>
+[2024-03-04 18:19:47,221] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-04 18:19:47,221] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-03-04 18:19:47,221] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-03-04 18:19:47,238] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): update_mart_d_tables> on 2024-03-03 00:00:00+00:00
+[2024-03-04 18:19:47,246] {standard_task_runner.py:52} INFO - Started process 1084 to run task
+[2024-03-04 18:19:47,248] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '1111583_postgresql_mart_update', 'update_mart_d_tables', 'scheduled__2024-03-03T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/583_postgresql_mart_update.py', '--cfg-path', '/tmp/tmpjl28cubc', '--error-file', '/tmp/tmpv3ntntsd']
+[2024-03-04 18:19:47,249] {standard_task_runner.py:80} INFO - Job 3: Subtask update_mart_d_tables
+[2024-03-04 18:19:47,447] {task_command.py:369} INFO - Running <TaskInstance: 1111583_postgresql_mart_update.update_mart_d_tables scheduled__2024-03-03T00:00:00+00:00 [running]> on host 789d6fe201bc
+[2024-03-04 18:19:47,667] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=1111583_postgresql_mart_update
+AIRFLOW_CTX_TASK_ID=update_mart_d_tables
+AIRFLOW_CTX_EXECUTION_DATE=2024-03-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-03-03T00:00:00+00:00
+[2024-03-04 18:19:47,715] {base.py:68} INFO - Using connection ID 'pg_connection' for task execution.
+[2024-03-04 18:19:47,757] {logging_mixin.py:115} INFO - 1
+[2024-03-04 18:19:47,760] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/583_postgresql_mart_update.py", line 47, in update_mart_d_tables
+    cur.execute(
+psycopg2.errors.UndefinedTable: relation "stage.user_activity_log" does not exist
+LINE 14: ...select distinct date_time::date as fact_date from stage.user...
+                                                              ^
+
+[2024-03-04 18:19:47,816] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=1111583_postgresql_mart_update, task_id=update_mart_d_tables, execution_date=20240303T000000, start_date=20240304T181947, end_date=20240304T181947
+[2024-03-04 18:19:47,836] {standard_task_runner.py:92} ERROR - Failed to execute job 3 for task update_mart_d_tables (relation "stage.user_activity_log" does not exist
+LINE 14: ...select distinct date_time::date as fact_date from stage.user...
+                                                              ^
+; 1084)
+[2024-03-04 18:19:47,879] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-03-04 18:19:48,011] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

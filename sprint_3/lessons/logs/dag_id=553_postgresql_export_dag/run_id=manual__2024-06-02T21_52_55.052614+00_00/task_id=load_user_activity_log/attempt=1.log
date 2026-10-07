@@ -1,0 +1,23 @@
+[2024-06-02 21:53:01,621] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 553_postgresql_export_dag.load_user_activity_log manual__2024-06-02T21:52:55.052614+00:00 [queued]>
+[2024-06-02 21:53:01,628] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 553_postgresql_export_dag.load_user_activity_log manual__2024-06-02T21:52:55.052614+00:00 [queued]>
+[2024-06-02 21:53:01,629] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 21:53:01,629] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-02 21:53:01,629] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 21:53:01,643] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_user_activity_log> on 2024-06-02 21:52:55.052614+00:00
+[2024-06-02 21:53:01,650] {standard_task_runner.py:52} INFO - Started process 8054 to run task
+[2024-06-02 21:53:01,653] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '553_postgresql_export_dag', 'load_user_activity_log', 'manual__2024-06-02T21:52:55.052614+00:00', '--job-id', '85', '--raw', '--subdir', 'DAGS_FOLDER/tmp_dag.py', '--cfg-path', '/tmp/tmpx4arzs5n', '--error-file', '/tmp/tmpj8o2tcak']
+[2024-06-02 21:53:01,653] {standard_task_runner.py:80} INFO - Job 85: Subtask load_user_activity_log
+[2024-06-02 21:53:01,832] {task_command.py:369} INFO - Running <TaskInstance: 553_postgresql_export_dag.load_user_activity_log manual__2024-06-02T21:52:55.052614+00:00 [running]> on host d29a6a2ebe77
+[2024-06-02 21:53:02,052] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=553_postgresql_export_dag
+AIRFLOW_CTX_TASK_ID=load_user_activity_log
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-02T21:52:55.052614+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-06-02T21:52:55.052614+00:00
+[2024-06-02 21:53:02,154] {python.py:173} INFO - Done. Returned value was: None
+[2024-06-02 21:53:02,214] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=553_postgresql_export_dag, task_id=load_user_activity_log, execution_date=20240602T215255, start_date=20240602T215301, end_date=20240602T215302
+[2024-06-02 21:53:02,253] {local_task_job.py:156} INFO - Task exited with return code 0
+[2024-06-02 21:53:02,378] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

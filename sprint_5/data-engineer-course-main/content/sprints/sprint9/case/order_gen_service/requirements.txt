@@ -1,0 +1,10 @@
+asyncio
+APScheduler
+confluent_kafka
+Faker
+flask
+kafka-python
+psycopg
+psycopg-binary
+pydantic
+pymongo

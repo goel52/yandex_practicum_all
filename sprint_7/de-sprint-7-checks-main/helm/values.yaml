@@ -1,0 +1,39 @@
+replicaCount: 1
+
+image:
+  repository: cr.yandex/crprrfjafjnhr7os2f25/de_sprint_7_checks
+  pullPolicy: IfNotPresent
+  # Required: CI supplies the immutable build tag.
+  tag: ""
+imagePullSecrets: []
+
+containerPort: 8000
+containerHealthPath: /api/v1/health/healthcheck
+
+config:
+  SPARK_LOCAL_IP: "127.0.0.1"
+  PYSPARK_PYTHON: "/usr/local/bin/python"
+  PYSPARK_SUBMIT_ARGS: "--driver-memory 1g --conf spark.ui.enabled=false pyspark-shell"
+
+# TLS uses the default ingress-controller certificate, as in de-start-checks.
+ingress:
+  enabled: true
+  className: nginx
+  annotations: {}
+  tls:
+    - hosts:
+        - de-sp7-checks.de.education-services.ru
+  hosts:
+    - host: de-sp7-checks.de.education-services.ru
+      paths:
+        - path: /
+          pathType: Prefix
+
+# Initial sizing for one Python process and a local Spark JVM; tune under load.
+resources:
+  requests:
+    cpu: "500m"
+    memory: 1536Mi
+  limits:
+    cpu: "2"
+    memory: 3Gi

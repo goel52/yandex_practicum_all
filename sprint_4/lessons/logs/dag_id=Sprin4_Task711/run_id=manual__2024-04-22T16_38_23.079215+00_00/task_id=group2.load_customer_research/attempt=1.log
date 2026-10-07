@@ -1,0 +1,30 @@
+[2024-04-22 16:38:52,746] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group2.load_customer_research manual__2024-04-22T16:38:23.079215+00:00 [queued]>
+[2024-04-22 16:38:52,778] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Sprin4_Task711.group2.load_customer_research manual__2024-04-22T16:38:23.079215+00:00 [queued]>
+[2024-04-22 16:38:52,779] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-22 16:38:52,779] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-04-22 16:38:52,779] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-04-22 16:38:52,792] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): group2.load_customer_research> on 2024-04-22 16:38:23.079215+00:00
+[2024-04-22 16:38:52,803] {standard_task_runner.py:52} INFO - Started process 2822 to run task
+[2024-04-22 16:38:52,805] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'Sprin4_Task711', 'group2.load_customer_research', 'manual__2024-04-22T16:38:23.079215+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/dag_with_autocheck.py', '--cfg-path', '/tmp/tmp3l_9ivz_', '--error-file', '/tmp/tmpdw8g59lt']
+[2024-04-22 16:38:52,805] {standard_task_runner.py:80} INFO - Job 26: Subtask group2.load_customer_research
+[2024-04-22 16:38:52,984] {task_command.py:369} INFO - Running <TaskInstance: Sprin4_Task711.group2.load_customer_research manual__2024-04-22T16:38:23.079215+00:00 [running]> on host 22ba72ddea2e
+[2024-04-22 16:38:53,195] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=Sprin4_Task711
+AIRFLOW_CTX_TASK_ID=group2.load_customer_research
+AIRFLOW_CTX_EXECUTION_DATE=2024-04-22T16:38:23.079215+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-04-22T16:38:23.079215+00:00
+[2024-04-22 16:38:53,196] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: load_file_to_pg() missing 1 required positional argument: 'conn_args'
+[2024-04-22 16:38:53,253] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=Sprin4_Task711, task_id=group2.load_customer_research, execution_date=20240422T163823, start_date=20240422T163852, end_date=20240422T163853
+[2024-04-22 16:38:53,272] {standard_task_runner.py:92} ERROR - Failed to execute job 26 for task group2.load_customer_research (load_file_to_pg() missing 1 required positional argument: 'conn_args'; 2822)
+[2024-04-22 16:38:53,282] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-04-22 16:38:53,407] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

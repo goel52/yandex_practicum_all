@@ -1,0 +1,361 @@
+import importlib
+import os
+import sys
+import traceback
+
+import vertica_python
+
+
+class TerminalColors:
+        HEADER = '\033[95m'
+        OKBLUE = '\033[94m'
+        OKCYAN = '\033[96m'
+        OKGREEN = '\033[92m'
+        WARNING = '\033[93m'
+        FAIL = '\033[91m'
+        ENDC = '\033[0m'
+        BOLD = '\033[1m'
+        UNDERLINE = '\033[4m'
+
+conn_test = {
+    'host': 'vertica.tgcloudenv.ru',
+    'port': 5433,
+    'user': 'tester_readonly_all',       
+    'password': 'WN0rql2hkq9yNvz',
+    'database': 'dwh',
+    'autocommit': True
+}
+
+auth_login = 'de8a13notrulez_gmail_com'.upper()
+
+def best_permutation(r1, r2, i, idx, perm):
+    found = False
+    out = []
+    if i == len(r1):
+        l_idx = len(idx)
+        if l_idx:
+            for j in range(i):
+                if perm[j] == 'x':
+                    perm[j] = idx.pop()
+        return [tuple(perm)]
+
+    for j in idx:
+        if r1[i] == r2[j]:
+            found = True
+            ndx = idx[:]
+            ndx.remove(j)
+            out += best_permutation(r1, r2, i + 1, ndx, perm + [j])
+    if not found:
+        out += best_permutation(r1, r2, i + 1, idx, perm + ['x'])
+    return out
+
+def compare_result(usr, usr_d, sol, sol_d, order_sensitive):
+    usr_cols = len(usr_d)
+    sol_cols = len(sol_d)
+    usr_rows = len(usr)
+    sol_rows = len(sol)
+    if usr_cols > sol_cols:
+        error_message = f'Количество столбцов больше ожидаемого. Ожидается: {sol_cols}'
+        print_author_rows_dataset(0, sol_d, sol) #d_platform
+        print_user_rows_dataset(0, usr_d, usr) #d_platform
+        return False, error_message
+    if usr_cols < sol_cols:
+        error_message = f'Количество столбцов меньше ожидаемого. Ожидается: {sol_cols}'
+        print_author_rows_dataset(0, sol_d, sol) #d_platform
+        print_user_rows_dataset(0, usr_d, usr) #d_platform
+        return False, error_message
+    if usr_rows > sol_rows:
+        error_message = f'Количество строк больше ожидаемого. Ожидается: {sol_rows}'
+        print_author_rows_dataset(-1, sol_d, sol) #d_platform
+        print_user_rows_dataset(-1, usr_d, usr) #d_platform
+        return False, error_message
+    if usr_rows < sol_rows:
+        error_message = f'Количество строк меньше ожидаемого. Ожидается: {sol_rows}'
+        print_author_rows_dataset(-1, sol_d, sol) #d_platform
+        print_user_rows_dataset(-1, usr_d, usr) #d_platform
+        return False, error_message
+
+    if order_sensitive:
+        indexes = list(range(usr_cols))
+        for i in range(usr_cols):
+            match = False
+            max_x = -1
+            same_type = False
+            for index_pos, j in enumerate(indexes):
+                each = True
+                for x in range(usr_rows):
+                    if usr[x][i] != sol[x][j]:
+                        each = False
+                        if x > max_x:
+                            max_x = x
+                            same_type = usr_d[i].type_code == sol_d[j].type_code
+                        break
+                if each:
+                    match = True
+                    del indexes[index_pos]
+                    break
+            if not match:
+                print_author_rows_dataset(0, sol_d, sol) #d_platform
+                print_user_rows_dataset(0, usr_d, usr) #d_platform
+                if same_type:
+                    msg1 = 'Не верный результат'
+                else:
+                    msg1 = 'Не верный результат, проверьте тип'
+                msg2 = ' | '.join([str(z) for z in usr[max_x]])
+                msg_out = f'{msg1} стр. {max_x+1}, колонка {usr_d[i].name}, {msg2}'
+                return False, msg_out
+
+                # return False, (
+                #     'Не верный результат' if same_type
+                #     else 'Не верный результат, проверьте тип',
+                #     max_x+1,
+                #     usr_d[i].name,
+                #     ' | '.join([str(z) for z in usr[max_x]])
+                # )
+    elif usr_rows != 0:
+        # git difference
+        sol_set = [set(x) for x in sol]
+        err_conf = None
+        all_perms = set()
+        for usr_i, row in enumerate(usr):
+            maxlen = 0
+            very_similar = []
+            for i, x in enumerate(sol_set):
+                row_set = set(row)
+                l = len(row_set & x)
+                if l > 0:
+                    if l == maxlen:
+                        very_similar.append(i)
+                    elif l > maxlen:
+                        very_similar = [i]
+                        maxlen = l
+            if maxlen == 0:
+                err_conf = (usr_i, 0, True)
+                break
+            # Convert all very similar to permutations
+            permutations = set()
+            for i in very_similar:
+                permutations.update(
+                    best_permutation(row, sol[i], 0,
+                                     list(range(usr_cols)), []))
+            if all_perms == set():
+                all_perms = permutations
+            else:
+                all_perms &= permutations
+
+            if len(all_perms) == 0:
+                err_conf = (usr_i, 0, True)
+                break
+            if len(all_perms) == 1:
+                break
+
+        # Now if we have more than one permutation - they are all equal
+        if err_conf is None:
+            perm = all_perms.pop()
+            # Get solution in right column order
+            sol2 = [tuple(
+                        [x[perm[i]] for i in range(usr_cols)])
+                    for x in sol]
+            # Check usr in sol
+            for i in range(len(usr)):
+                x = usr[i]
+                try:
+                    i_sol = sol2.index(x)
+                except ValueError:
+                    max_len = -1
+                    max_r = None
+                    for r in sol2:
+                        l = len(set(x) & set(r))
+                        if l > max_len:
+                            max_len = l
+                            max_r = r
+                    for j in range(usr_cols):
+                        if x[j] != max_r[j]:
+                            same_type = usr_d[j].type_code == sol_d[perm[j]].type_code
+                            err_conf = (i, j, same_type)
+                            break
+                    break
+                sol2.pop(i_sol)
+        if err_conf is not None:
+            i, j, same_type = err_conf
+            column = usr_d[j].name,
+            row = i,
+            data = ' | '.join([str(z) for z in usr[i]]),
+            if same_type:
+                error_message = f'\nПолученный результат не совпадает с ожидаемым (в частности столбец `{column[0]}`, строка `{row[0]}`\n{data[0]}).\n'
+            else:
+                error_message = f'\nПолученный результат не совпадает с ожидаемым, проверьте тип (в частности столбец `{column[0]}`, строка `{row[0]}`\n{data[0]}).\n'
+            print_author_rows_dataset(row[0], sol_d, sol) #d_platform
+            print_user_rows_dataset(row[0], usr_d, usr) #d_platform
+            return False, error_message
+
+    return True, None
+
+def clear_comments(query):
+    clear_query = ''
+    for lines_query in query.splitlines():
+        if lines_query.strip() and lines_query.strip()[0:2] != '--':
+            clear_query += lines_query + '\n'
+    return clear_query
+
+#d_platform
+def print_user_rows_dataset(row = 0, col_user = None, r_user = None): 
+    print('\nВывод результата пользователя:')
+    print_rows_dataset(col_user, r_user, row)
+
+#d_platform
+def print_author_rows_dataset(row = 0, col_author = None, r_author = None): 
+    print('\nОжидаемый результат:')
+    print_rows_dataset(col_author, r_author, row)
+
+#d_platform
+def print_rows_dataset(col_ds, row_ds, row):
+    count_col = len(col_ds)
+    import pandas as pd
+    pd.set_option('display.max_rows', None)
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.width', None)
+    pd.set_option('display.max_colwidth', None)
+
+    df = pd.DataFrame(
+        row_ds,
+        columns=[col_ds[n].name for n in range(count_col)]
+    )
+    start = 0
+    end = len(row_ds)
+    if end > 20 and row != -1:
+        start = max(0, row-3)
+        end = min(start + 18, end)
+        print(f'<выведены строки с {start} по {end}>')
+
+    if end:
+        print(f'{TerminalColors.WARNING}\n{df.loc[start:end]}{TerminalColors.ENDC}')
+    else:
+        print(f'{TerminalColors.WARNING}\nТаблица не содержит данных{TerminalColors.ENDC}')
+
+# def compare_select(
+#     cur,
+#     sgl_fstring,
+#     user_login,
+#     ifo_mssg=''
+# ):
+#     print(ifo_mssg)
+#     # sql_select = f'SELECT chat_name, registration_dt, country, age FROM {user_login}__STAGING.users'
+#     login = user_login
+#     sql_select = eval(f'f"SELECT chat_name, registration_dt, country, age FROM {login}__STAGING.users"')
+
+#     cur.execute(sql_select)
+#     col_user = cur.description
+#     r_user = cur.fetchall()
+
+#     login = auth_login
+#     sql_select = eval(f'f"SELECT chat_name, registration_dt, country, age FROM {login}__STAGING.users"')
+
+#     cur.execute(sql_select)
+#     col_auth = cur.description
+#     r_auth = cur.fetchall()
+
+#     cmp_res = compare_result(r_user, col_user, r_auth, col_auth, False)
+
+#     # if cmp_res[0] == False:
+#     #     return False, cmp_res[1]
+#     return cmp_res
+
+def de_test(
+        full_lesson_path: str,
+        realization_file='realization.sql',
+        sql_author=None,
+        dsn='postgresql://jovyan:jovyan@localhost:5432/de',
+        user_login=None):
+
+    try:
+        if user_login is None:
+            user_py = importlib.import_module(realization_file[:-3])
+            user_login = user_py.vertica_user.upper()
+        print(f'login: {user_login}')
+    except Exception as e:
+        traceback.print_exc()
+        return False, f'\n{TerminalColors.WARNING}Исправьте ошибки в файле {realization_file}{TerminalColors.ENDC}\n'
+
+    try:
+        with vertica_python.connect(**conn_test) as conn:
+            cur = conn.cursor()
+
+            #
+            # данные меняют, временно убираем проверку данных
+            #
+            # проверка users - потом оптимизировать
+            sql_select = f'SELECT chat_name, registration_dt, country, age FROM {user_login}__STAGING.users LIMIT 10'
+            print('Проверка таблицы `users...')
+
+            cur.execute(sql_select)
+            col_user = cur.description
+            r_user = cur.fetchall()
+
+            if len(r_user) == 0:
+                return False, f'В таблице {user_login}__STAGING.users нет данных'
+
+            # sql_select = f'SELECT chat_name, registration_dt, country, age FROM {auth_login}__STAGING.users LIMIT 10'
+
+            # cur.execute(sql_select)
+            # col_auth = cur.description
+            # r_auth = cur.fetchall()
+
+            # cmp_res = compare_result(r_user, col_user, r_auth, col_auth, False)
+
+            # if cmp_res[0] == False:
+            #     return False, cmp_res[1]
+
+            # проверка dialogs - потом оптимизировать
+            print('Проверка таблицы `dialogs`...')
+            sql_select = f'SELECT message_id, message_ts, message_from, message_to, message FROM {user_login}__STAGING.dialogs LIMIT 10'
+
+            cur.execute(sql_select)
+            col_user = cur.description
+            r_user = cur.fetchall()
+
+            if len(r_user) == 0:
+                return False, f'В таблице {user_login}__STAGING.dialogs нет данных'
+            # sql_select = f'SELECT message_id, message_ts, message_from, message_to, message FROM {auth_login}__STAGING.dialogs LIMIT 10'
+
+            # cur.execute(sql_select)
+            # col_auth = cur.description
+            # r_auth = cur.fetchall()
+
+            # cmp_res = compare_result(r_user, col_user, r_auth, col_auth, False)
+
+            # if cmp_res[0] == False:
+            #     return False, cmp_res[1]
+
+            # проверка groups - потом оптимизировать
+            print('Проверка таблицы `groups`...')
+            sql_select = f'SELECT id, admin_id, group_name, registration_dt, is_private FROM {user_login}__STAGING.groups LIMIT 10'
+
+            cur.execute(sql_select)
+            col_user = cur.description
+            r_user = cur.fetchall()
+
+            if len(r_user) == 0:
+                return False, f'В таблице {user_login}__STAGING.groups нет данных'
+
+            # sql_select = f'SELECT id, admin_id, group_name, registration_dt, is_private FROM {auth_login}__STAGING.groups LIMIT 10'
+
+            # cur.execute(sql_select)
+            # col_auth = cur.description
+            # r_auth = cur.fetchall()
+
+            # cmp_res = compare_result(r_user, col_user, r_auth, col_auth, False)
+
+    except FileNotFoundError:
+        error_message = (f'Не найден файл с решением {realization_file}')
+        return False, error_message
+    except Exception as e:
+        error_message = (str(e))
+        return False, error_message
+    else:
+        return True, None
+
+if __name__== '__main__':
+    LESSON_TESTS_PATH = '/app/sprint-6-tests'
+    res = de_test(LESSON_TESTS_PATH, 'de06020601auth.py')
+    print(res)

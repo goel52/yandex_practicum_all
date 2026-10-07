@@ -1,0 +1,198 @@
+stages:
+  - validate
+  - build
+  - deploy
+
+variables:
+  SERVICE_NAME: de-sprint-7-checks
+  IMAGE_REPOSITORY: cr.yandex/crprrfjafjnhr7os2f25/de_sprint_7_checks
+  KUBECTL_VERSION: "v1.34.10"
+  HELM_VERSION: "3.21.4"
+  HELM_RELEASE: de-sprint-7-checks
+  HELM_CHART_PATH: helm
+  KUBE_NAMESPACE: sprints-infra
+  YC_PROFILE: data-engineer-sa
+  INGRESS_HOST: "de-sp7-checks.de.education-services.ru"
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  GIT_STRATEGY: fetch
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^de-sprint-7-checks(-.*)?$/'
+
+.deploy_before_script: &deploy_before_script
+  - apk add --no-cache curl ca-certificates jq
+  - >
+    curl -fsSL --retry 5 --retry-all-errors --retry-delay 2 --continue-at -
+    --output kubectl
+    "https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl"
+  - install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+  - kubectl version --client
+  - mkdir -p "${HOME}/.kube"
+  - |
+    if [ -z "${KUBECONFIG_B64_SA_DEPLOY_SPRINTS_INFRA:-}" ]; then
+      echo "ERROR: CI variable KUBECONFIG_B64_SA_DEPLOY_SPRINTS_INFRA is empty or not set."
+      exit 1
+    fi
+    if ! echo "${KUBECONFIG_B64_SA_DEPLOY_SPRINTS_INFRA}" | base64 -d > "${HOME}/.kube/config"; then
+      echo "ERROR: KUBECONFIG_B64_SA_DEPLOY_SPRINTS_INFRA is not valid base64."
+      exit 1
+    fi
+    if [ ! -s "${HOME}/.kube/config" ] || ! grep -q "current-context:" "${HOME}/.kube/config"; then
+      echo "ERROR: decoded kubeconfig looks invalid."
+      exit 1
+    fi
+  - chmod 600 "${HOME}/.kube/config"
+  - export KUBECONFIG="${HOME}/.kube/config"
+  - |
+    if ! DEPLOY_CONTEXT="$(kubectl config current-context)" || [ -z "${DEPLOY_CONTEXT}" ]; then
+      echo "ERROR: CI kubeconfig must define a non-empty current-context."
+      exit 1
+    fi
+    echo "Deployment context: ${DEPLOY_CONTEXT}"
+  - 'echo "Deployment namespace: ${KUBE_NAMESPACE}"'
+  - |
+    if ! kubectl get pods -n "${KUBE_NAMESPACE}" >/dev/null 2>&1; then
+      echo "ERROR: namespace ${KUBE_NAMESPACE} does not exist or is not accessible."
+      exit 1
+    fi
+    if ! helm list -n "${KUBE_NAMESPACE}" >/dev/null 2>&1; then
+      echo "ERROR: cluster auth failed for namespace ${KUBE_NAMESPACE}."
+      exit 1
+    fi
+
+validate_helm:
+  stage: validate
+  image:
+    name: alpine/helm:${HELM_VERSION}
+    entrypoint: [""]
+  script:
+    - helm lint "${HELM_CHART_PATH}" --strict --set-string image.tag=ci-validation
+    - helm template "${HELM_RELEASE}" "${HELM_CHART_PATH}" --namespace "${KUBE_NAMESPACE}" --set-string image.tag=ci-validation > /tmp/rendered.yaml
+
+build_image:
+  stage: build
+  image: docker:27.5.1-cli
+  services:
+    - name: docker:27.5.1-dind
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^de-sprint-7-checks(-.*)?$/'
+  script:
+    - export IMAGE_TAG="v$(date +%Y-%m-%d)-r${CI_PIPELINE_IID}"
+    - export CACHE_IMAGE="${IMAGE_REPOSITORY}:buildcache"
+    - apk add --no-cache bash curl jq
+    - curl -fsSL https://storage.yandexcloud.net/yandexcloud-yc/install.sh | bash /dev/stdin -v 0.122.0
+    - export PATH="${PATH}:/root/yandex-cloud/bin"
+    - yc --version
+    - |
+      if [ -z "${YC_SA_KEY:-}" ]; then
+        echo "ERROR: CI variable YC_SA_KEY is empty or not set."
+        exit 1
+      fi
+    - umask 077
+    - printf '%s' "${YC_SA_KEY}" > sa-key.json
+    - trap 'rm -f sa-key.json' EXIT
+    - |
+      if ! jq -e '.id and .service_account_id and .private_key' sa-key.json >/dev/null; then
+        echo "ERROR: YC_SA_KEY must be a Yandex Cloud service account authorized key JSON."
+        echo "Expected JSON fields: id, service_account_id, private_key."
+        exit 1
+      fi
+    - yc config profile create "${YC_PROFILE}"
+    - yc config profile activate "${YC_PROFILE}"
+    - yc config set service-account-key sa-key.json
+    - |
+      if ! YC_IAM_TOKEN="$(yc iam create-token)"; then
+        echo "ERROR: failed to create IAM token from YC_SA_KEY."
+        echo "Most likely the authorized key from YC_SA_KEY was deleted, belongs to another cloud, or the JSON was copied incorrectly."
+        echo "Create a new authorized key for the CI service account and update GitLab variable YC_SA_KEY."
+        exit 1
+      fi
+      printf '%s' "${YC_IAM_TOKEN}" | docker login --username iam --password-stdin cr.yandex
+    - >
+      docker buildx create --name "${SERVICE_NAME}-builder-${CI_PIPELINE_IID}" --use
+      --driver docker-container
+      --driver-opt image=moby/buildkit:v0.16.0
+    - docker buildx inspect --bootstrap
+    - >
+      docker buildx build --platform linux/amd64
+      --file dockerfile --target test
+      --cache-from "type=registry,ref=${CACHE_IMAGE}"
+      .
+    - >
+      docker buildx build --platform linux/amd64
+      --file dockerfile
+      --cache-from "type=registry,ref=${CACHE_IMAGE}"
+      --cache-to "type=registry,ref=${CACHE_IMAGE},mode=max,oci-mediatypes=true,image-manifest=true"
+      --provenance=false
+      --output "type=registry,name=${IMAGE_REPOSITORY}:${IMAGE_TAG},oci-mediatypes=false"
+      .
+    - printf "IMAGE_REPOSITORY=%s\nIMAGE_TAG=%s\n" "${IMAGE_REPOSITORY}" "${IMAGE_TAG}" > build.env
+  artifacts:
+    reports:
+      dotenv: build.env
+
+deploy:
+  stage: deploy
+  resource_group: de-sprint-7-checks-deploy
+  image:
+    name: alpine/helm:${HELM_VERSION}
+    entrypoint: [""]
+  needs:
+    - job: build_image
+      artifacts: true
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^de-sprint-7-checks(-.*)?$/'
+  before_script:
+    *deploy_before_script
+  script:
+    - |
+      : "${IMAGE_REPOSITORY:?Build image repository is required}"
+      : "${IMAGE_TAG:?Build image tag is required}"
+      umask 077
+      jq -n \
+        --arg repository "${IMAGE_REPOSITORY}" \
+        --arg tag "${IMAGE_TAG}" \
+        --arg host "${INGRESS_HOST}" \
+        '{image: {repository: $repository, tag: $tag}}
+         + (if $host == "" then {} else
+           {ingress: {enabled: true,
+             hosts: [{host: $host, paths: [{path: "/", pathType: "Prefix"}]}],
+             tls: [{hosts: [$host]}]}}
+           end)' > ci-values.yaml
+    - helm lint "${HELM_CHART_PATH}" --strict -f ci-values.yaml
+    - |
+      ATTEMPTS=30
+      SLEEP_SECONDS=10
+      i=1
+      while [ "$i" -le "$ATTEMPTS" ]; do
+        if ! helm status "${HELM_RELEASE}" -n "${KUBE_NAMESPACE}" >/tmp/helm-status.txt 2>/dev/null; then
+          echo "Helm release ${HELM_RELEASE} not found yet, continue with install."
+          break
+        fi
+        STATUS="$(awk -F': ' '/^STATUS:/{print $2}' /tmp/helm-status.txt)"
+        case "${STATUS}" in
+          pending-install|pending-upgrade|pending-rollback)
+            echo "Helm release is locked (${STATUS}), waiting ${SLEEP_SECONDS}s... (${i}/${ATTEMPTS})"
+            sleep "${SLEEP_SECONDS}"
+            ;;
+          *)
+            echo "Helm release status is ${STATUS}, continue deploy."
+            break
+            ;;
+        esac
+        i=$((i + 1))
+      done
+      if [ "$i" -gt "$ATTEMPTS" ]; then
+        echo "ERROR: Helm release is still locked after $((ATTEMPTS * SLEEP_SECONDS))s."
+        exit 1
+      fi
+    - |
+      helm upgrade --install "${HELM_RELEASE}" "${HELM_CHART_PATH}" \
+        --namespace "${KUBE_NAMESPACE}" \
+        --atomic \
+        --wait \
+        --timeout 10m \
+        -f ci-values.yaml

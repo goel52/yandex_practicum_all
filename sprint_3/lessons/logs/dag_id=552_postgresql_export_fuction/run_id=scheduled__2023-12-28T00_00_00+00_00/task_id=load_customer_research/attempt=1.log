@@ -1,0 +1,32 @@
+[2023-12-29 17:52:03,941] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 552_postgresql_export_fuction.load_customer_research scheduled__2023-12-28T00:00:00+00:00 [queued]>
+[2023-12-29 17:52:03,949] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 552_postgresql_export_fuction.load_customer_research scheduled__2023-12-28T00:00:00+00:00 [queued]>
+[2023-12-29 17:52:03,949] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-29 17:52:03,949] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-12-29 17:52:03,950] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-29 17:52:03,967] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_customer_research> on 2023-12-28 00:00:00+00:00
+[2023-12-29 17:52:03,972] {standard_task_runner.py:52} INFO - Started process 718 to run task
+[2023-12-29 17:52:03,976] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '552_postgresql_export_fuction', 'load_customer_research', 'scheduled__2023-12-28T00:00:00+00:00', '--job-id', '245', '--raw', '--subdir', 'DAGS_FOLDER/t_dag.py', '--cfg-path', '/tmp/tmpdr8qfg70', '--error-file', '/tmp/tmp9sguj52c']
+[2023-12-29 17:52:03,976] {standard_task_runner.py:80} INFO - Job 245: Subtask load_customer_research
+[2023-12-29 17:52:04,171] {task_command.py:369} INFO - Running <TaskInstance: 552_postgresql_export_fuction.load_customer_research scheduled__2023-12-28T00:00:00+00:00 [running]> on host dce15870cce9
+[2023-12-29 17:52:04,401] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=552_postgresql_export_fuction
+AIRFLOW_CTX_TASK_ID=load_customer_research
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-28T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-12-28T00:00:00+00:00
+[2023-12-29 17:52:04,459] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/t_dag.py", line 36, in load_file_to_pg
+    extras.execute_values(cur, insert_stmt, df.values)
+NameError: name 'extras' is not defined
+[2023-12-29 17:52:04,518] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=552_postgresql_export_fuction, task_id=load_customer_research, execution_date=20231228T000000, start_date=20231229T175203, end_date=20231229T175204
+[2023-12-29 17:52:04,539] {standard_task_runner.py:92} ERROR - Failed to execute job 245 for task load_customer_research (name 'extras' is not defined; 718)
+[2023-12-29 17:52:04,552] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-12-29 17:52:04,693] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

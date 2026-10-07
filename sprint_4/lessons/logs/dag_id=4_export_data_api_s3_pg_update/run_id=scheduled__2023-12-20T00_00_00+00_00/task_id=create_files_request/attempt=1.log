@@ -1,0 +1,21 @@
+[2023-12-21 17:49:23,845] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 4_export_data_api_s3_pg_update.create_files_request scheduled__2023-12-20T00:00:00+00:00 [queued]>
+[2023-12-21 17:49:23,847] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 4_export_data_api_s3_pg_update.create_files_request scheduled__2023-12-20T00:00:00+00:00 [queued]>
+[2023-12-21 17:49:23,848] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-21 17:49:23,848] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-12-21 17:49:23,848] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-21 17:49:23,852] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): create_files_request> on 2023-12-20 00:00:00+00:00
+[2023-12-21 17:49:23,853] {standard_task_runner.py:52} INFO - Started process 947 to run task
+[2023-12-21 17:49:23,855] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '4_export_data_api_s3_pg_update', 'create_files_request', 'scheduled__2023-12-20T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/sprint3.py', '--cfg-path', '/tmp/tmpbro1od8b', '--error-file', '/tmp/tmp8p02vkai']
+[2023-12-21 17:49:23,856] {standard_task_runner.py:80} INFO - Job 6: Subtask create_files_request
+[2023-12-21 17:49:23,872] {standard_task_runner.py:92} ERROR - Failed to execute job 6 for task create_files_request ((sqlite3.OperationalError) no such table: dag_run
+[SQL: SELECT dag_run.state AS dag_run_state, dag_run.id AS dag_run_id, dag_run.dag_id AS dag_run_dag_id, dag_run.queued_at AS dag_run_queued_at, dag_run.execution_date AS dag_run_execution_date, dag_run.start_date AS dag_run_start_date, dag_run.end_date AS dag_run_end_date, dag_run.run_id AS dag_run_run_id, dag_run.creating_job_id AS dag_run_creating_job_id, dag_run.external_trigger AS dag_run_external_trigger, dag_run.run_type AS dag_run_run_type, dag_run.conf AS dag_run_conf, dag_run.data_interval_start AS dag_run_data_interval_start, dag_run.data_interval_end AS dag_run_data_interval_end, dag_run.last_scheduling_decision AS dag_run_last_scheduling_decision, dag_run.dag_hash AS dag_run_dag_hash, dag_run.log_template_id AS dag_run_log_template_id 
+FROM dag_run 
+WHERE dag_run.dag_id = ? AND dag_run.run_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('4_export_data_api_s3_pg_update', 'scheduled__2023-12-20T00:00:00+00:00', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8); 947)
+[2023-12-21 17:49:23,882] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-12-21 17:49:23,893] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=4_export_data_api_s3_pg_update, task_id=create_files_request, execution_date=20231220T000000, start_date=20231221T174923, end_date=20231221T174923
+[2023-12-21 17:49:23,906] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

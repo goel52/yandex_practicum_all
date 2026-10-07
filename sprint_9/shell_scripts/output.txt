@@ -1,0 +1,8 @@
+{
+  "status": "OK", 
+  "test_redis_response": {
+    "load_result": "\n            Redis is Ready. You can check object with key='77d6464d802645450d60fb2f' in your Redis.\n            You should get value string equal to the one in response.\n        ", 
+    "result_key": "77d6464d802645450d60fb2f", 
+    "result_value": "25fa440b8ee64e5e481fa6b5"
+  }
+}

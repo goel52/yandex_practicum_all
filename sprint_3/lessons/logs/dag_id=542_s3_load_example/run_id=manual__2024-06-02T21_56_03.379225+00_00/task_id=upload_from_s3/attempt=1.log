@@ -1,0 +1,43 @@
+[2024-06-02 21:56:05,467] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 542_s3_load_example.upload_from_s3 manual__2024-06-02T21:56:03.379225+00:00 [queued]>
+[2024-06-02 21:56:05,475] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: 542_s3_load_example.upload_from_s3 manual__2024-06-02T21:56:03.379225+00:00 [queued]>
+[2024-06-02 21:56:05,475] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 21:56:05,475] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2024-06-02 21:56:05,476] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2024-06-02 21:56:05,489] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): upload_from_s3> on 2024-06-02 21:56:03.379225+00:00
+[2024-06-02 21:56:05,497] {standard_task_runner.py:52} INFO - Started process 8237 to run task
+[2024-06-02 21:56:05,499] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', '542_s3_load_example', 'upload_from_s3', 'manual__2024-06-02T21:56:03.379225+00:00', '--job-id', '88', '--raw', '--subdir', 'DAGS_FOLDER/download_dag_static.py', '--cfg-path', '/tmp/tmpnsosfkru', '--error-file', '/tmp/tmpnzpyumri']
+[2024-06-02 21:56:05,500] {standard_task_runner.py:80} INFO - Job 88: Subtask upload_from_s3
+[2024-06-02 21:56:05,695] {task_command.py:369} INFO - Running <TaskInstance: 542_s3_load_example.upload_from_s3 manual__2024-06-02T21:56:03.379225+00:00 [running]> on host d29a6a2ebe77
+[2024-06-02 21:56:05,926] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=542_s3_load_example
+AIRFLOW_CTX_TASK_ID=upload_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2024-06-02T21:56:03.379225+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-06-02T21:56:03.379225+00:00
+[2024-06-02 21:56:05,927] {logging_mixin.py:115} INFO - https://storage.yandexcloud.net/s3-sprint3-static/lessons/customer_research.csv
+[2024-06-02 21:56:06,065] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/download_dag_static.py", line 27, in upload_from_s3
+    pd.read_csv(url).to_csv(f"/lessons/5. Реализация ETL в Airflow/4. Extract: как подключиться к хранилищу, чтобы получить файл/Задание 2/{file}", index = False)
+  File "/usr/local/lib/python3.8/dist-packages/pandas/core/generic.py", line 3563, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+  File "/usr/local/lib/python3.8/dist-packages/pandas/io/formats/format.py", line 1180, in to_csv
+    csv_formatter.save()
+  File "/usr/local/lib/python3.8/dist-packages/pandas/io/formats/csvs.py", line 241, in save
+    with get_handle(
+  File "/usr/local/lib/python3.8/dist-packages/pandas/io/common.py", line 697, in get_handle
+    check_parent_directory(str(handle))
+  File "/usr/local/lib/python3.8/dist-packages/pandas/io/common.py", line 571, in check_parent_directory
+    raise OSError(fr"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/lessons/5. Реализация ETL в Airflow/4. Extract: как подключиться к хранилищу, чтобы получить файл/Задание 2'
+[2024-06-02 21:56:06,125] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=542_s3_load_example, task_id=upload_from_s3, execution_date=20240602T215603, start_date=20240602T215605, end_date=20240602T215606
+[2024-06-02 21:56:06,143] {standard_task_runner.py:92} ERROR - Failed to execute job 88 for task upload_from_s3 (Cannot save file into a non-existent directory: '/lessons/5. Реализация ETL в Airflow/4. Extract: как подключиться к хранилищу, чтобы получить файл/Задание 2'; 8237)
+[2024-06-02 21:56:06,178] {local_task_job.py:156} INFO - Task exited with return code 1
+[2024-06-02 21:56:06,305] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

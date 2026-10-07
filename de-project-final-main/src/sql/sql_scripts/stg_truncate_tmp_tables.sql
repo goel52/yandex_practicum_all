@@ -1,0 +1,5 @@
+truncate table MIKEPAFYANDEXRU__STAGING.transactions_input_tmp_kafka;
+truncate table MIKEPAFYANDEXRU__STAGING.transactions_tmp_kafka;
+truncate table MIKEPAFYANDEXRU__STAGING.transactions_tmp_s3;
+truncate table MIKEPAFYANDEXRU__STAGING.currencies_tmp_kafka;
+truncate table MIKEPAFYANDEXRU__STAGING.currencies_tmp_s3;

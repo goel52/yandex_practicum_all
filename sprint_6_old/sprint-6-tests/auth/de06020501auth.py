@@ -1,0 +1,1 @@
+vertica_user = 'DE8A13NOTRULEZ_GMAIL_COM'

@@ -6,3 +6,4 @@ CHECK_SERVICE_URL = os.environ.get('CHECK_SERVICE_URL', 'https://de-sp7-checks.d
 
 # Ваш учебный логин со страницы `cloud-infra.de.education-services.ru` начинающийся с `s`.
 STUDENT_ID = os.environ.get('STUDENT_ID', 's28509656')
+sprint_7/s7-lessons/settings.py

@@ -245,3 +245,10 @@ volumes:
   postgres-db-volume:
   airflow-dags:
   lessons:
+
+#параметры подключения к бд
+#    dbname="student",
+#    user="student",
+#    password="student-de",
+#    host="localhost", ( для dbeaver, для airflow - postrges)
+#    port="15432"

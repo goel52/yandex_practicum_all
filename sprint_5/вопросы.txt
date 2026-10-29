@@ -1,5 +1,25 @@
 Not found order 653c02e6a907517a926f3a8c. Finishing.
-нужно заменить break на continue
+нужно заменить break на continue|
+
+
+
+ключ постгрес
+
+RqgcX9kTN6
+kX3riKpibW
+mgXgcqQzFv
+WXcbW1NLh9
+y7M8bxX1z9
+8i8NjzMWsa
+jemju9gmX7
+
+ключи монго
+
+
+xLsFC21xuE
+k2Hetyy0nu
+ChGN03te37
+ngY7uVwwuM
 
 
 db.orders.aggregate([

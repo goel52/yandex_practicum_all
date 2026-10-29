@@ -40,9 +40,9 @@ echo my_key:my_message | docker run -i -v "D:/CA.pem:/data/CA.pem" --network=hos
 
 
 
-docker run -it -v "D:/CA.pem:/data/CA.pem" --network=host edenhill/kcat:1.7.1 kcat -b rc1b-2erh7b35n4j4v869.mdb.yandexcloud.net:9091 -L -X security.protocol=SASL_SSL -X sasl.mechanisms=SCRAM-SHA-512 -X sasl.username="de-student" -X sasl.password="ltcneltyn" -X ssl.ca.location=/data/CA.pem -t base -K: -C -o beginning
+docker run -it -v "D:/CA.pem:/data/CA.pem" --network=host edenhill/kcat:1.7.1 kcat -b rc1a-7rfgrnqpdmt4bl5r.mdb.yandexcloud.net:9091 -L -X security.protocol=SASL_SSL -X sasl.mechanisms=SCRAM-SHA-512 -X sasl.username="producer_consumer" -X sasl.password="!17Abgusta" -X ssl.ca.location=/data/CA.pem -t base -K: -C -o beginning
 
-
+C:/Users/User/.kafka/YandexInternalRootCA.pem:/data/CA.pem edenhill/kcat:1.7.1 -b rc1a-7rfgrnqpdmt4bl5r.mdb.yandexcloud.net:9091 -m 10000 -X security.protocol=SASL_SSL -X sasl.mechanisms=SCRAM-SHA-512 -X sasl.username=producer_consumer -X sasl.password="!17Abgusta" -X ssl.ca.location=/data/CA.pem -L
 
 
 
